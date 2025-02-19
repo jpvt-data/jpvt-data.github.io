@@ -1,17 +1,39 @@
-h1{
-    font-size: 30px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    font-family: Cochin, sans-serif;
-    color: #3f188d
-    }
-    
-    p{
-    font-size: 20px;
-    text-align: left;
-    font-family: Cochin, sans-serif;
-    }
-    
-    body {
-    background-color: #acf1ef;
-    font-family: Cochin, sans-serif;
-    }
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

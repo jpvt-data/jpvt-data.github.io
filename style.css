@@ -61,6 +61,21 @@ footer {
     border-radius: 5px;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
 .project a:hover {
     background: #555;
 }

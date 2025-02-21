@@ -1,3 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
 /* Conteneur en deux colonnes */
 .container {
     display: flex;
@@ -11,66 +51,58 @@
 /* Chaque colonne (Projets / Business Cases) */
 .column {
     width: 48%;
-    text-align: left;
+    text-align: left; /* Texte aligné à gauche */
 }
 
-/* Style des blocs projets et business cases */
 .project {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
     background: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%; /* Force les blocs à occuper la même hauteur */
 }
 
-/* Conteneur interne pour forcer une hauteur uniforme */
-.project-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-}
-
-/* Images des projets */
 .project img {
-    width: 100%; /* L'image prend toute la largeur du bloc */
+    width: 10%;
     max-width: 400px;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Titres des projets */
 .project h3 {
     color: #333;
-    font-size: 1.2em;
-    text-align: left;
 }
 
-/* Description */
-.project p {
-    flex-grow: 1; /* Permet à la description de s'étendre pour équilibrer les tailles */
-    text-align: left;
-}
-
-/* Bouton */
 .project a {
     display: inline-block;
-    text-align: center;
-    padding: 10px 15px;
+    margin-top: 10px;
+    padding: 8px 12px;
     background: #222;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: bold;
 }
+
+.project a:hover {
+    background: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
 
 .project a:hover {
     background: #555;

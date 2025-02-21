@@ -38,6 +38,22 @@ footer {
     margin-top: 20px;
 }
 
+/* Conteneur en deux colonnes */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Chaque colonne (Projets / Business Cases) */
+.column {
+    width: 48%;
+    text-align: left; /* Texte aligné à gauche */
+}
+
 .project {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -90,5 +106,15 @@ footer {
 
 .project a:hover {
     background: #555;
+}
+
+/* Responsive : affichage en colonne unique sur petit écran */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+    }
 }
 

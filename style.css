@@ -47,6 +47,14 @@ footer {
     background: #f9f9f9;
 }
 
+.project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 .project h3 {
     color: #333;
 }
@@ -59,6 +67,10 @@ footer {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.project a:hover {
+    background: #555;
 }
 
 .btn {

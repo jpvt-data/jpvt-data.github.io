@@ -10,13 +10,14 @@ body {
 header {
   background: #222;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  /* Pour centrer tout le contenu */
+  text-align: center;
 }
 
 .logo {
@@ -31,6 +32,7 @@ header {
   color: #ccc;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   padding: 0;
@@ -38,7 +40,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block; /* inline-block pour permettre le centrage */
   margin: 0 15px;
 }
 
@@ -87,6 +89,14 @@ nav ul li.active a {
 
 .btn:hover {
   background: #0056b3;
+}
+
+/* Pied de page */
+footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+  text-align: center; /* centrage du texte */
 }
 
 /* Responsive design pour les petits écrans */

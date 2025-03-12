@@ -163,3 +163,58 @@ footer {
     }
 }
 
+/* ========== Section À propos - Disposition en colonnes ========== */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.about-text {
+    width: 70%;
+    text-align: left;
+}
+
+.about-info {
+    width: 30%;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100px; /* Ajuste la taille de la photo */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-info a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-info a:hover {
+    color: #007BFF;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-info {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 120px;
+    }
+}
+
+

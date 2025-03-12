@@ -169,19 +169,19 @@ footer {
     flex-direction: row; /* Affichage en ligne par défaut */
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 5px;
 }
 
 .about-text {
-    width: 65%; /* Ajustement pour bien occuper l’espace */
+    width: 75%; /* Ajustement pour bien occuper l’espace */
     text-align: left;
     padding-right: 20px;
 }
 
 .about-info {
-    width: 30%;
+    width: 25%;
     text-align: center;
     background: #fff;
     padding: 20px;

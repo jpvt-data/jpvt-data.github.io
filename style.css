@@ -166,37 +166,42 @@ footer {
 /* ========== Section À propos - Disposition en colonnes ========== */
 .about-container {
     display: flex;
-    flex-direction: row; /* Affichage en ligne par défaut */
+    align-items: stretch; /* Permet d'aligner les éléments sur la même hauteur */
     justify-content: space-between;
-    align-items: center;
     max-width: 1400px;
     margin: 0 auto;
     padding: 50px 5px;
 }
 
 .about-text {
-    width: 75%; /* Ajustement pour bien occuper l’espace */
+    width: 65%; /* Ajustement pour bien occuper l’espace */
     text-align: left;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Permet d'occuper tout l'espace disponible */
 }
 
 .about-text h2 {
     text-align: left; /* Aligne le titre à gauche */
-    margin-left: 0; /* Supprime tout décalage éventuel */
+    margin-left: 0;
 }
 
 .about-text p {
     text-align: left; /* Aligne également le texte à gauche */
-    margin-left: 0; /* Supprime tout éventuel décalage */
+    margin-left: 0;
 }
 
 .about-info {
-    width: 35%;
+    width: 30%; /* Ajustement pour une meilleure proportion */
     text-align: left;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alignement vertical optimal */
+    align-self: flex-start; /* Aligne avec le titre */
 }
 
 /* Conteneur interne : Aligner la photo et le texte en ligne */

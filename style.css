@@ -191,23 +191,55 @@ footer {
 }
 
 .about-info {
-    width: 35%; /* Augmente la largeur du bloc */
-    text-align: left; /* Alignement du texte à gauche */
+    width: 35%;
+    text-align: left;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Conteneur interne : Aligner la photo et le texte en ligne */
+.about-content {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacement entre la photo et le texte */
+    width: 100%;
+}
+
+/* Colonne de la photo */
+.about-photo {
+    width: 30%;
+    display: flex;
     justify-content: center;
 }
 
-/* Aligner les icônes et textes */
-.about-info p {
+.profile-img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Colonne des informations */
+.about-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Alignement des icônes et texte */
+.about-details p {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espace entre l'icône et le texte */
+    gap: 8px;
     margin: 5px 0;
+}
+
+/* Icônes uniformisées */
+.about-details p img {
+    width: 20px;
+    height: auto;
 }
 
 /* Ajustement du bouton */
@@ -218,11 +250,6 @@ footer {
     font-size: 1em;
 }
 
-/* Icônes */
-.about-info p img {
-    width: 20px; /* Taille uniforme pour les emojis/icônes */
-    height: auto;
-}
 
 /* Responsive pour éviter que le bloc soit trop large */
 @media (max-width: 1024px) {

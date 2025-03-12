@@ -166,7 +166,7 @@ footer {
 /* ========== Section À propos - Disposition en colonnes ========== */
 .about-container {
     display: flex;
-    flex-direction: row; /* Affichage en ligne par défaut */
+    flex-direction: center; /* Affichage en ligne par défaut */
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;

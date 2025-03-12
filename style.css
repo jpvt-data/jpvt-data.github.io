@@ -193,6 +193,7 @@ footer {
 .about-info {
     width: 35%;
     text-align: left;
+    margin-top: 20px; /* Ajuste cette valeur selon le rendu */
     align-self: center; /* Centre le bloc blanc par rapport à son parent */
     background: #fff;
     padding: 20px;

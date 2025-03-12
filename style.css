@@ -177,6 +177,7 @@ footer {
 .about-text {
     width: 75%; /* Ajustement pour bien occuper l’espace */
     text-align: left;
+    margin-left: 0;
     padding-right: 0px;
 }
 

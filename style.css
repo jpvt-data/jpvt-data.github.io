@@ -7,7 +7,7 @@ body {
     background: #f5f5f5;
 }
 
-/* ========== En-tête ========== */
+/* ========== En-tÃªte ========== */
 header {
     background: #222;
     color: white;
@@ -47,7 +47,7 @@ nav ul li a:hover {
     color: #007BFF;
 }
 
-/* ========== Section À propos ========== */
+/* ========== Section Ã€ propos ========== */
 .about {
     background: #e3e3e3;
     padding: 50px 20px;
@@ -63,6 +63,22 @@ nav ul li a:hover {
     color: #555;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.about .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.about .btn:hover {
+    background: #0056b3;
 }
 
 /* ========== Section Projets ========== */
@@ -133,4 +149,150 @@ footer {
     color: white;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* ========== Responsive : Affichage mobile ========== */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-category {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ========== Section Ã€ propos - Disposition en colonnes ========== */
+.about-container {
+    display: flex;
+    flex-direction: center; /* Affichage en ligne par dÃ©faut */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 5px;
+}
+
+.about-text {
+    width: 75%; /* Ajustement pour bien occuper lâ€™espace */
+    text-align: left;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    text-align: left; /* Aligne le titre Ã  gauche */
+    margin-left: 0; /* Supprime tout dÃ©calage Ã©ventuel */
+}
+
+.about-text p {
+    text-align: left; /* Aligne Ã©galement le texte Ã  gauche */
+    margin-left: 0; /* Supprime tout Ã©ventuel dÃ©calage */
+}
+
+.about-info {
+    width: 35%;
+    text-align: left;
+    margin-top: 50px; /* Ajuste cette valeur selon le rendu */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Conteneur interne : Aligner la photo et le texte en ligne */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacement entre la photo et le texte */
+    width: 100%;
+}
+
+/* Colonne de la photo */
+.about-photo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Colonne des informations */
+.about-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Alignement des icÃ´nes et texte */
+.about-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+/* IcÃ´nes uniformisÃ©es */
+.about-details p img {
+    width: 20px;
+    height: auto;
+}
+
+/* Ajustement du bouton */
+.about-info .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+
+/* Responsive pour Ã©viter que le bloc soit trop large */
+@media (max-width: 1024px) {
+    .about-info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.profile-img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-info a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-info a:hover {
+    color: #007BFF;
+}
+
+/* ========== Responsive : Affichage mobile ========== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .about-info {
+        width: 100%;
+        margin-top: 20px;
+    }
 }

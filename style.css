@@ -95,26 +95,49 @@ nav ul li a:hover {
 
 .project-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column; /* Affichage en une colonne (chaque projet sur une ligne) */
+    align-items: center; /* Centrage du contenu */
+    gap: 20px; /* Espacement entre les projets */
+    /* justify-content: space-around;
+    flex-wrap: wrap;*/
 }
 
 .project-category {
-    width: 30%;
+    display: flex;
+    flex-direction: row; /* Met l'image et le texte en ligne */
+    align-items: center;
+    width: 100%; /* Occupe toute la largeur */
+    max-width: 1000px; /* Largeur max pour éviter que ça devienne trop large */
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left; /* Alignement du texte */
+    /*width: 30%;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
 }
 
 .project-category img {
-    height: 300px;
+    width: 200px; /* Image occupe 30% du bloc */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    /*height: 300px;
     width: 300px;
     object-fit: cover;
     margin-bottom: 15px;
-    border-radius: 8px;
+    border-radius: 8px;*/
+}
+
+/*Nouveau*/
+.project-details {
+    width: 70%; /* Texte occupe 70% du bloc */
+    padding-left: 20px; /* Espacement entre l'image et le texte */
 }
 
 .project-category h3 {

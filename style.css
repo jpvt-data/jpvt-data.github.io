@@ -111,6 +111,7 @@ nav ul li a:hover {
 
 .project-category img {
     height: 300px;
+    width: 300px;
     object-fit: cover;
     margin-bottom: 15px;
     border-radius: 8px;

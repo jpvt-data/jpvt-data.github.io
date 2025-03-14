@@ -110,7 +110,6 @@ nav ul li a:hover {
 }
 
 .project-category img {
-    width: 100%;
     height: 300px;
     object-fit: cover;
     margin-bottom: 15px;

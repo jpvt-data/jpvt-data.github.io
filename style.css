@@ -110,9 +110,9 @@ nav ul li a:hover {
 }
 
 .project-category img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
     margin-bottom: 15px;
     border-radius: 8px;
 }

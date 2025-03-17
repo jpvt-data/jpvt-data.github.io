@@ -324,3 +324,77 @@ footer {
         margin-top: 20px;
     }
 }
+
+/* ========== Section Compétences ========== */
+.competences-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 50px 5px;
+}
+
+.competences-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.competences-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.competences-text {
+    width: 55%;
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.competences-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.competences-text ul {
+    padding-left: 0;
+}
+
+.competences-text ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .competences-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .competences-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .competences-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .competences-text h2 {
+        text-align: center;
+    }
+
+    .competences-text ul {
+        text-align: left;
+        display: inline-block;
+    }
+}
+

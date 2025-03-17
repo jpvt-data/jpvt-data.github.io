@@ -175,5 +175,31 @@
     <footer>
         <p>© 2025 - Jean Paul Van Tongeren | <a href="https://github.com/jpvt-data">GitHub</a></p>
     </footer>
+<!-- Script défilement -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".project-wrapper");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let scrollAmount = 0;
+    let projectWidth = document.querySelector(".project-category").offsetWidth + 20; // Largeur d'un projet + marge
+
+    function scroll(direction) {
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        if (direction === "left") {
+            scrollAmount -= projectWidth;
+            if (scrollAmount < 0) scrollAmount = 0;
+        } else {
+            scrollAmount += projectWidth;
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+        }
+        container.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+
+    prevBtn.addEventListener("click", () => scroll("left"));
+    nextBtn.addEventListener("click", () => scroll("right"));
+});
+</script>
 </body>
 </html>

@@ -72,6 +72,8 @@
 
 <!-- SLIDE  -->
     <section id="projects2">
+        <h2>Mes Projets Data</h2>
+        
         <div class="slider projet-slider">
             <div class="slides">
                 <div class="slide active">
@@ -110,15 +112,17 @@
                     <p>Analyse des facteurs de dépression chez les étudiants en Inde pour développer des outils de suivi, des stratégies d’intervention précoce et un tableau de bord interactif.</p>
                     <a href="https://github.com/jpvt-data/CampusCARE/blob/main/README.md" class="btn">Voir le projet</a>
                 </div>
-            <div class="slider-controls">
-                <button class="prev" onclick="moveStreamlitSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="next" onclick="moveStreamlitSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>  
+            </div>
         </div>
+
+        <div class="slider-controls">
+            <button class="prev" onclick="moveStreamlitSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next" onclick="moveStreamlitSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>  
     </section>
 <!-- FIN SLIDE -->
 
@@ -212,5 +216,33 @@
     <footer>
         <p>© 2025 - Jean Paul Van Tongeren | <a href="https://github.com/jpvt-data">GitHub</a></p>
     </footer>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+            slide.classList.add("active");
+        }
+    });
+}
+
+function moveSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    } else if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+    showSlide(currentIndex);
+}
+
+// Afficher la première slide au chargement
+showSlide(currentIndex);
+</script>
+
 </body>
 </html>

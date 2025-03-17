@@ -398,3 +398,86 @@ footer {
     }
 }
 
+/* ========== Style du Slider de Projets ========== */
+.project-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.project-container {
+    overflow: hidden;
+    width: 90%;
+}
+
+.project-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.project-category {
+    flex: 0 0 calc(100% / 3 - 20px); /* 3 projets visibles */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-category img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Boutons de navigation */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .project-category {
+        flex: 0 0 calc(100% / 2 - 20px); /* 2 projets visibles */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-category {
+        flex: 0 0 100%; /* 1 projet visible */
+    }
+
+    .slider-btn {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+

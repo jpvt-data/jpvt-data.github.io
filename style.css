@@ -30,6 +30,8 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -43,8 +45,45 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #007BFF;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Icône du menu hamburger (affichée en mobile uniquement) */
+.menu-toggle {
+    display: none; /* Cachée par défaut */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Cacher le menu sur mobile par défaut */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Masquer le menu classique */
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher l'icône en mobile */
+    }
 }
 
 /* ========== Section Ã€ propos ========== */

@@ -175,5 +175,38 @@
     <footer>
         <p>© 2025 - Jean Paul Van Tongeren | <a href="https://github.com/jpvt-data">GitHub</a></p>
     </footer>
+    
+    <!-- Scrolling page lent -->
+    <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+    
+            if (targetElement) {
+                const scrollDuration = 1200; // Durée en millisecondes (1200ms = 1.2 secondes)
+                const startPosition = window.pageYOffset;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+    
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const progress = Math.min(timeElapsed / scrollDuration, 1);
+                    window.scrollTo(0, startPosition + distance * progress);
+    
+                    if (timeElapsed < scrollDuration) {
+                        requestAnimationFrame(animationScroll);
+                    }
+                }
+    
+                requestAnimationFrame(animationScroll);
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>

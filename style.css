@@ -93,7 +93,11 @@ nav ul li a {
     .menu-toggle {
         display: block; /* Affiche le menu hamburger */
     }
-
+    
+    .separator {
+        display: none; /* Cache les | en version mobile */
+    }
+    
     nav ul {
         display: none; /* Cache le menu par défaut */
         flex-direction: column;

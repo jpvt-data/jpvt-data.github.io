@@ -130,7 +130,7 @@ nav ul li a {
     }
 
     nav.active {
-        transform: translateX(66%); /* ✅ Fait apparaître le menu avec un slide-in */
+        transform: translateX(0); /* ✅ Fait apparaître le menu avec un slide-in */
     }
 
     nav ul {

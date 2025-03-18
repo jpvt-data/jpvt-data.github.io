@@ -13,7 +13,7 @@ header {
     height: 60px; /* Augmenter la hauteur pour inclure le hamburger */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 20px;
     position: fixed;
     width: 100%;
@@ -50,7 +50,10 @@ nav ul li a {
     font-size: 30px;
     color: white;
     cursor: pointer;
-    display: block;
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 20px;
 }
 
 /* === Cacher le menu normal en mobile === */
@@ -74,22 +77,31 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* === Affichage mobile : Menu caché au départ === */
+/* === Mode Mobile : Affichage du menu hamburger et menu caché === */
 @media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Garde le hamburger à gauche */
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Affiche le menu hamburger */
+    }
+
     nav ul {
         display: none; /* Cache le menu par défaut */
         flex-direction: column;
         background: #222;
         width: 100%;
         position: absolute;
-        top: 60px; /* Juste en dessous du header */
+        top: 60px;
         left: 0;
         padding: 10px 0;
+        text-align: center;
     }
 
     nav ul li {
         display: block;
-        text-align: center;
         margin: 10px 0;
     }
 }

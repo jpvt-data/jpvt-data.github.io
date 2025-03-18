@@ -229,6 +229,14 @@
             menu.style.display = "block"; // Ouvrir le menu
         }
     }
+        // Fermer le menu quand on clique sur un lien (uniquement en mobile)
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) { // ✅ Vérifie que c'est bien en mobile
+                toggleMenu(); // ✅ Ferme le menu après un clic
+            }
+        });
+    });
     </script>
     <!-- X Fermeture menu -->
     <script>

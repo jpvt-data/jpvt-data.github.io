@@ -35,18 +35,14 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 15px;
+    color: white;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav ul li a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 /* === Icône du menu hamburger === */

@@ -62,15 +62,17 @@ nav ul li a {
     padding: 5px;
 }
 
-/* === Croix ✖ pour fermer le menu en mobile === */
+/* === Croix ✖ pour fermer le menu === */
 .close-menu {
-    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 10px;
+    right: 15px; /* ✅ Place la croix à droite */
     font-size: 25px;
     color: white;
     cursor: pointer;
-    text-align: right;
-    padding: 10px 20px;
+    display: none; /* Cachée par défaut */
 }
+
 
 /* === Cacher le menu normal en mobile === */
 nav ul {
@@ -94,39 +96,46 @@ nav ul li a {
 }
 
 /* === Mode Mobile : Affichage du menu hamburger et menu caché === */
+/* === Affichage du menu mobile === */
 @media (max-width: 768px) {
-    header {
-        justify-content: space-between; /* Garde le hamburger à gauche */
-        padding: 0 10px;
-    }
-    
     .close-menu {
-        display: block; /* Afficher la croix en version mobile */
+        display: block; /* ✅ Affiche la croix seulement en mobile */
     }
 
     .menu-toggle {
-        display: block; /* Affiche le menu hamburger */
-    }
-    
-    .separator {
-        display: none; /* Cache les | en version mobile */
-    }
-    
-    nav ul {
-        display: none; /* Cache le menu par défaut */
-        flex-direction: column;
-        background: #222;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-        text-align: center;
+        display: block; /* ✅ Affiche l'icône hamburger */
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 50px;
+        padding-left: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    nav.active {
+        transform: translateX(0); /* ✅ Fait apparaître le menu avec un slide-in */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* ✅ Aligner le menu à gauche */
+        padding: 20px;
+    }
+
+    .separator {
+        display: none; /* Cache les | en version mobile */
     }
 }
 

@@ -100,6 +100,12 @@ nav ul li a {
 @media (max-width: 768px) {
     .close-menu {
         display: block; /* ✅ Affiche la croix seulement en mobile */
+        position: absolute;
+        top: 15px;
+        right: 20px; /* ✅ Ajoute une marge pour ne pas être collé */
+        font-size: 25px;
+        color: white; /* ✅ Assure que la croix est bien blanche */
+        cursor: pointer;        
     }
 
     .menu-toggle {
@@ -110,8 +116,8 @@ nav ul li a {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 66%%;
+        height: 50%;
         background: #222;
         display: flex;
         flex-direction: column;
@@ -124,14 +130,15 @@ nav ul li a {
     }
 
     nav.active {
-        transform: translateX(0); /* ✅ Fait apparaître le menu avec un slide-in */
+        transform: translateX(66%); /* ✅ Fait apparaître le menu avec un slide-in */
     }
 
     nav ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* ✅ Aligner le menu à gauche */
-        padding: 20px;
+        padding: 5px; /* Marge gauche */
+        margin: 15px 0; /* Espacement */
     }
 
     .separator {

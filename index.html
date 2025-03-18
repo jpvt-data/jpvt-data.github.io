@@ -233,16 +233,8 @@
     <!-- X Fermeture menu -->
     <script>
     function toggleMenu() {
-        const menu = document.querySelector("nav ul");
-        const closeBtn = document.querySelector(".close-menu");
-    
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-            closeBtn.style.display = "none"; // Cache la croix
-        } else {
-            menu.style.display = "block";
-            closeBtn.style.display = "block"; // Affiche la croix
-        }
+        const menu = document.querySelector("nav");
+        menu.classList.toggle("active"); // ✅ Ajoute/enlève la classe "active"
     }
     </script>
 

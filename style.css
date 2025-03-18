@@ -57,8 +57,8 @@ nav ul li a {
     cursor: pointer;
     display: none;
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 5px;
+    left: 5px;
     padding: 5px;
 }
 
@@ -87,7 +87,7 @@ nav ul li a {
 @media (max-width: 768px) {
     header {
         justify-content: space-between; /* Garde le hamburger à gauche */
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .menu-toggle {

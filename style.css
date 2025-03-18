@@ -57,8 +57,9 @@ nav ul li a {
     cursor: pointer;
     display: none;
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 20px;
+    padding: 5px;
 }
 
 /* === Cacher le menu normal en mobile === */

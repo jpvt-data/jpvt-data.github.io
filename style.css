@@ -621,11 +621,18 @@ footer {
 
     .skills-text {
         max-width: 90%; /* ✅ Ajuste la largeur du texte */
-        text-align: center;
+        text-align: justify;
     }
 
     .skills-logos {
         justify-content: center; /* ✅ Centre les logos */
+        gap: 10px; /* ✅ Réduit l’espace entre les logos */
+        max-width: 100%;
+    }
+
+    .skills-logos img {
+        height: 40px; /* ✅ Réduit légèrement la taille des logos pour s'adapter */
+        max-width: 80px; /* ✅ Empêche que les images dépassent */
     }
 }
 

@@ -206,6 +206,42 @@
         
     </section>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const datavizItems = document.querySelectorAll("#dataviz-gallery .dataviz-item img");
+    
+        // ✅ Récupère toutes les sources des images dans un tableau
+        const images = Array.from(datavizItems).map(img => img.src);
+    
+        function changeImage(imgElement) {
+            let newSrc;
+            do {
+                newSrc = images[Math.floor(Math.random() * images.length)];
+            } while (newSrc === imgElement.src); // ✅ Empêche de remplacer par la même image
+    
+            imgElement.style.opacity = "0"; // ✅ Déclenche la disparition en fondu
+    
+            setTimeout(() => {
+                imgElement.src = newSrc; // ✅ Change l'image
+                imgElement.style.opacity = "1"; // ✅ Réapparaît en fondu
+            }, 500); // ✅ Délai pour éviter un flash
+        }
+    
+        function startRotation() {
+            datavizItems.forEach((imgElement, index) => {
+                setTimeout(() => {
+                    setInterval(() => {
+                        changeImage(imgElement);
+                    }, 5000); // ✅ Changement toutes les 5 secondes
+                }, Math.random() * 3000); // ✅ Décalage initial pour éviter un effet de disparition simultanée
+            });
+        }
+    
+        startRotation();
+    });
+    </script>
+
+
     <!-- Conteneur pour l'affichage en plein écran -->
     <div id="fullscreen-container" class="fullscreen-hidden">
         <span class="close-fullscreen" onclick="closeFullscreen()">&times;</span>

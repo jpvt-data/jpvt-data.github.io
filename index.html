@@ -92,7 +92,7 @@
     
     <!-- SECTION PATCHWORK GALLERY -->
     
-    <section class="dataviz-gallery">
+    <section id="dataviz-gallery" class="dataviz-gallery">
         <div class="dataviz-item">
             <img src="assets/img/dashboard_vin.png" alt="Dataviz 1" onclick="openFullscreen(this)">
             <div class="dataviz-info">Dashboard - Etude de marché du Vin - 2025</div>
@@ -162,6 +162,20 @@
             }, 300);
         }
     }
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const gallery = document.getElementById("dataviz-gallery");
+        const items = Array.from(gallery.children); // ✅ Récupère tous les .dataviz-item
+    
+        // ✅ Mélange aléatoirement les éléments
+        items.sort(() => Math.random() - 0.5);
+    
+        // ✅ Vide le conteneur puis réinsère les éléments mélangés
+        gallery.innerHTML = "";
+        items.forEach(item => gallery.appendChild(item));
+    });
     </script>
 
 

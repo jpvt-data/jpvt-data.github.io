@@ -566,11 +566,11 @@ footer {
 /* Logos */
 .skills-logos {
     display: flex;
-    gap: 20px; /* Espacement entre les logos */
+    gap: 30px; /* Espacement entre les logos */
 }
 
 .skills-logos img {
-    height: 80px; /* Taille des logos */
+    height: 70px; /* Taille des logos */
     filter: brightness(1.2); /* Accentue le blanc sur fond noir */
 }
 

@@ -728,3 +728,76 @@ footer {
 }
 
 /* === FIN PATCHWORK GALLERY === */
+
+/* === PATCHWORK GALLERY ANIME === */
+/* === Conteneur principal des lignes === */
+.dataviz-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    padding: 10px 0;
+}
+
+/* === Une ligne de dataviz qui défile === */
+.dataviz-row {
+    display: flex;
+    white-space: nowrap;
+    gap: 15px;
+    overflow: hidden;
+}
+
+/* === Images des dashboards === */
+.dataviz-item {
+    flex: 0 0 auto;
+    width: 300px; /* ✅ Taille fixe */
+    height: 200px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* === Ajuste l’image pour ne pas être déformée === */
+.dataviz-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* === Animation de défilement pour chaque ligne === */
+@keyframes scroll1 {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes scroll2 {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes scroll3 {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* === Vitesse de défilement différente par ligne === */
+.speed1 {
+    animation: scroll1 20s linear infinite;
+}
+
+.speed2 {
+    animation: scroll2 25s linear infinite;
+}
+
+.speed3 {
+    animation: scroll3 30s linear infinite;
+}
+
+/* === Pause de l'animation en mode plein écran === */
+.paused {
+    animation-play-state: paused !important;
+}
+
+/* === FIN PATCHWORK GALLERY ANIME === */

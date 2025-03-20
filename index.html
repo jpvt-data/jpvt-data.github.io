@@ -133,22 +133,31 @@
 
     <script>
     function openFullscreen(imgElement) {
-        console.log("Image cliquée :", imgElement.src); // ✅ Vérifie si la fonction est bien appelée
-        
+        console.log("Image cliquée :", imgElement.src); // Vérification console
+    
         const fullscreenContainer = document.getElementById("fullscreen-container");
         const fullscreenImg = document.getElementById("fullscreen-img");
     
-        fullscreenImg.src = imgElement.src; // ✅ Remplace l'image par celle cliquée
-        fullscreenContainer.classList.add("fullscreen-visible");
+        if (fullscreenContainer && fullscreenImg) {
+            fullscreenImg.src = imgElement.src;
+            fullscreenContainer.classList.add("fullscreen-visible");
+    
+            console.log("Mode plein écran activé !");
+        } else {
+            console.log("⚠️ Erreur : #fullscreen-container ou #fullscreen-img introuvable.");
+        }
     }
     
     function closeFullscreen() {
-        console.log("Fermeture du plein écran"); // ✅ Vérifie si le bouton de fermeture fonctionne
-        
+        console.log("Fermeture du plein écran");
         const fullscreenContainer = document.getElementById("fullscreen-container");
-        fullscreenContainer.classList.remove("fullscreen-visible");
+    
+        if (fullscreenContainer) {
+            fullscreenContainer.classList.remove("fullscreen-visible");
+        }
     }
     </script>
+
 
     <!-- FIN SECTION PATCHWORK GALLERY -->
 

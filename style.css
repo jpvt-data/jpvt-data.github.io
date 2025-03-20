@@ -570,7 +570,7 @@ footer {
 }
 
 .skills-logos img {
-    height: 50px; /* Taille des logos */
+    height: 80px; /* Taille des logos */
     filter: brightness(1.2); /* Accentue le blanc sur fond noir */
 }
 
@@ -578,7 +578,7 @@ footer {
 .skills-title {
     font-size: 22px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 

@@ -205,26 +205,34 @@
 
         
     </section>
-
+    <!-- SCRIPT DISPARITION APPARITION DES IMAGES -->
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         const datavizItems = document.querySelectorAll("#dataviz-gallery .dataviz-item img");
     
         // ✅ Récupère toutes les sources des images dans un tableau
-        const images = Array.from(datavizItems).map(img => img.src);
+        let images = Array.from(datavizItems).map(img => img.src);
     
-        function changeImage(imgElement) {
+        function getNewImage(excludeList) {
             let newSrc;
+            let tries = 0;
             do {
                 newSrc = images[Math.floor(Math.random() * images.length)];
-            } while (newSrc === imgElement.src); // ✅ Empêche de remplacer par la même image
+                tries++;
+            } while (excludeList.includes(newSrc) && tries < 10); // ✅ Évite les doublons à l'affichage
+            return newSrc;
+        }
     
-            imgElement.style.opacity = "0"; // ✅ Déclenche la disparition en fondu
+        function changeImage(imgElement) {
+            const currentImages = Array.from(datavizItems).map(img => img.src); // ✅ Liste des images visibles
+            let newSrc = getNewImage(currentImages);
+    
+            imgElement.style.opacity = "0"; // ✅ Début du fondu
     
             setTimeout(() => {
                 imgElement.src = newSrc; // ✅ Change l'image
-                imgElement.style.opacity = "1"; // ✅ Réapparaît en fondu
-            }, 500); // ✅ Délai pour éviter un flash
+                imgElement.style.opacity = "1"; // ✅ Réapparition fluide
+            }, 1500); // ✅ Temps de transition allongé
         }
     
         function startRotation() {
@@ -232,8 +240,8 @@
                 setTimeout(() => {
                     setInterval(() => {
                         changeImage(imgElement);
-                    }, 5000); // ✅ Changement toutes les 5 secondes
-                }, Math.random() * 3000); // ✅ Décalage initial pour éviter un effet de disparition simultanée
+                    }, 5000 + Math.random() * 3000); // ✅ Augmente la variabilité pour éviter l’effet flash
+                }, Math.random() * 6000); // ✅ Décalage initial encore plus large
             });
         }
     
@@ -241,6 +249,7 @@
     });
     </script>
 
+    <!-- SCRIPT GRAND ECRAN DES IMAGES DU PATCHWORK -->
 
     <!-- Conteneur pour l'affichage en plein écran -->
     <div id="fullscreen-container" class="fullscreen-hidden">

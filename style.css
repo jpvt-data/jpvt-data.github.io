@@ -588,4 +588,42 @@ footer {
     line-height: 1.5;
 }
 
+/* === Correction du texte déroulant en mode mobile === */
+@media (max-width: 768px) {
+    #text-container {
+        height: auto; /* ✅ Ajuste la hauteur */
+        min-height: 50px; /* ✅ Évite le tronquage */
+        overflow: visible; /* ✅ Empêche le texte d'être caché */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #text-slide {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* === Ajustement du bloc Skills en mobile === */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* ✅ Change la disposition en colonne */
+        text-align: center;
+    }
+
+    .skills-left {
+        margin-bottom: 20px; /* ✅ Ajoute un espace entre les logos et le texte */
+    }
+
+    .skills-text {
+        max-width: 90%; /* ✅ Ajuste la largeur du texte */
+        text-align: center;
+    }
+
+    .skills-logos {
+        justify-content: center; /* ✅ Centre les logos */
+    }
+}
 

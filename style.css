@@ -537,7 +537,7 @@ footer {
 
 
 
-/* === Section Compétences (Fond Noir) === */
+/* === Section Skills (Fond Noir) === */
 .skills-section {
     background-color: black;
     color: white;
@@ -546,38 +546,44 @@ footer {
     justify-content: center;
 }
 
-/* Conteneur des logos + texte */
+/* Conteneur principal */
 .skills-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 80%;
     max-width: 1200px;
 }
 
-/* Partie gauche : Logos */
+/* Partie gauche : Logos et Titre */
+.skills-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logos */
 .skills-logos {
     display: flex;
     gap: 20px; /* Espacement entre les logos */
 }
 
 .skills-logos img {
-    height: 60px; /* Taille des logos */
+    height: 50px; /* Taille des logos */
     filter: brightness(1.2); /* Accentue le blanc sur fond noir */
+}
+
+/* Titre sous les logos */
+.skills-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* Partie droite : Texte */
 .skills-text {
-    margin-left: 40px; /* Espace entre logos et texte */
     max-width: 600px;
-}
-
-.skills-text h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.skills-text p {
     font-size: 16px;
     line-height: 1.5;
 }

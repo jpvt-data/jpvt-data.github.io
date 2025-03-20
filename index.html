@@ -205,61 +205,6 @@
 
         
     </section>
-    <!-- SCRIPT DISPARITION APPARITION DES IMAGES -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const datavizItems = document.querySelectorAll("#dataviz-gallery .dataviz-item img");
-    
-        // ✅ Récupère toutes les sources des images dans un tableau
-        let images = Array.from(datavizItems).map(img => img.src);
-    
-        // ✅ Fonction pour sélectionner une nouvelle image différente de celles visibles
-        function getNewImage(excludeList) {
-            let newSrc;
-            let tries = 0;
-            do {
-                newSrc = images[Math.floor(Math.random() * images.length)];
-                tries++;
-            } while (excludeList.includes(newSrc) && tries < 10); // ✅ Évite les doublons
-            return newSrc;
-        }
-    
-        function changeImage(imgElement) {
-            const currentImages = Array.from(datavizItems).map(img => img.src); // ✅ Images actuellement affichées
-            let newSrc = getNewImage(currentImages);
-    
-            imgElement.style.opacity = "0"; // ✅ Début du fondu
-    
-            setTimeout(() => {
-                imgElement.src = newSrc; // ✅ Change l'image
-                imgElement.style.opacity = "1"; // ✅ Réapparition fluide
-            }, 1500); // ✅ Temps de transition fluide
-        }
-    
-        function startRotation() {
-            const itemsArray = Array.from(datavizItems);
-            const selectedItems = [];
-    
-            // ✅ Sélectionner seulement les images des 3 premières lignes
-            let maxItems = Math.min(itemsArray.length, 3 * Math.floor(itemsArray.length / 5)); 
-            for (let i = 0; i < maxItems; i++) {
-                selectedItems.push(itemsArray[i]);
-            }
-    
-            selectedItems.forEach((imgElement, index) => {
-                setTimeout(() => {
-                    setInterval(() => {
-                        changeImage(imgElement);
-                    }, 10000 + Math.random() * 3000); // ✅ Garde chaque image affichée 10 secondes
-                }, Math.random() * 8000); // ✅ Décalage initial plus long pour éviter les effets synchronisés
-            });
-        }
-    
-        startRotation();
-    });
-    </script>
-
-
     <!-- SCRIPT GRAND ECRAN DES IMAGES DU PATCHWORK -->
 
     <!-- Conteneur pour l'affichage en plein écran -->

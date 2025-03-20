@@ -140,7 +140,10 @@
     
         if (fullscreenContainer && fullscreenImg) {
             fullscreenImg.src = imgElement.src;
-            fullscreenContainer.classList.add("fullscreen-visible");
+            fullscreenContainer.style.display = "flex"; // ✅ Force l'affichage
+            setTimeout(() => {
+                fullscreenContainer.classList.add("fullscreen-visible");
+            }, 50); // ✅ Petit délai pour éviter un bug d'affichage
     
             console.log("Mode plein écran activé !");
         } else {
@@ -154,6 +157,9 @@
     
         if (fullscreenContainer) {
             fullscreenContainer.classList.remove("fullscreen-visible");
+            setTimeout(() => {
+                fullscreenContainer.style.display = "none"; // ✅ Cache l'élément après l'animation
+            }, 300);
         }
     }
     </script>

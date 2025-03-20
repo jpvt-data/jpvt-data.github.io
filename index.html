@@ -133,6 +133,8 @@
 
     <script>
     function openFullscreen(imgElement) {
+        console.log("Image cliquée :", imgElement.src); // ✅ Vérifie si la fonction est bien appelée
+        
         const fullscreenContainer = document.getElementById("fullscreen-container");
         const fullscreenImg = document.getElementById("fullscreen-img");
     
@@ -141,6 +143,8 @@
     }
     
     function closeFullscreen() {
+        console.log("Fermeture du plein écran"); // ✅ Vérifie si le bouton de fermeture fonctionne
+        
         const fullscreenContainer = document.getElementById("fullscreen-container");
         fullscreenContainer.classList.remove("fullscreen-visible");
     }

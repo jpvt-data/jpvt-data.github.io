@@ -27,12 +27,6 @@ header {
     z-index: 1000;
 }
 
-#fullscreen-container {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
 
 /* ========== Navigation ========== */
 nav ul {

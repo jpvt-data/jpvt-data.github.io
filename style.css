@@ -728,3 +728,62 @@ footer {
 }
 
 /* === FIN PATCHWORK GALLERY === */
+
+/* === BANDEAU SOCIAL === */
+.social-banner {
+    background: black; /* ✅ Fond noir */
+    padding: 20px 0; /* ✅ Espacement vertical */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* ✅ Centre les icônes */
+    gap: 40px; /* ✅ Espacement entre les icônes */
+}
+
+.icon-link {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-link img {
+    width: 40px; /* ✅ Taille des icônes */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* ✅ Animation douce */
+}
+
+.icon-link:hover img {
+    transform: scale(1.2); /* ✅ Zoom au survol */
+}
+
+/* === Texte au survol === */
+.icon-text {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8); /* ✅ Fond semi-transparent */
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.icon-link:hover .icon-text {
+    opacity: 1; /* ✅ Affichage du texte au survol */
+}
+
+/* === ESPACE ENTRE LES SECTIONS === */
+.intro {
+    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous l'intro */
+}
+
+.social-banner {
+    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous le bandeau social */
+}
+

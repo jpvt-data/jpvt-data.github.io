@@ -35,6 +35,43 @@
         <p>Data Analyst | Business Intelligence | Machine Learning</p>
     </section>
 
+    <!-- Intro déroulante -->
+    
+    <section class="intro">
+        <div class="title">Hey, I'm Jean Paul Van Tongeren</div>
+        <div id="text-container">
+            <div id="text-slide">J'analyse les données pour créer de la valeur.</div>
+        </div>
+    </section>
+    
+    <script>
+    const texts = [
+        "J'analyse les données pour créer de la valeur.",
+        "J'explore, je visualise, et je rends les données parlantes.",
+        "La donnée est une histoire, mon rôle est de la raconter.",
+        "Transformons les chiffres en décisions intelligentes."
+    ];
+    
+    let index = 0;
+    const textContainer = document.getElementById("text-slide");
+    
+    function changeText() {
+        textContainer.style.opacity = 0; // Effet de fondu avant changement
+    
+        setTimeout(() => {
+            index = (index + 1) % texts.length;
+            textContainer.innerText = texts[index];
+            textContainer.style.opacity = 1;
+        }, 500); // Temps du fondu (500ms)
+    }
+    
+    // Changer toutes les 3 secondes (temps de lecture)
+    setInterval(changeText, 3000);
+    </script>
+
+    <!-- FIN Intro déroulante -->
+
+
     <section id="about">
         <div class="about-container">
             <!-- Colonne gauche : Texte de présentation -->

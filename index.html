@@ -98,6 +98,79 @@
         <div class="dataviz-row speed3" id="row3"></div>
     </section>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+            "assets/img/dashboard_vin.png",
+            "assets/img/patchwork/campuscare_dashboard.png",
+            "assets/img/patchwork/campuscare_streamlit.png",
+            "assets/img/patchwork/cinema_dashboard1.png",
+            "assets/img/patchwork/cinema_dashboard2.png",
+            "assets/img/patchwork/cinema_etude.png",
+            "assets/img/patchwork/heatmap.png",
+            "assets/img/patchwork/dispersion.png",
+            "assets/img/patchwork/market2.png"
+        ];
+    
+        const rows = [
+            document.getElementById("row1"),
+            document.getElementById("row2"),
+            document.getElementById("row3")
+        ];
+    
+        // Mélanger les images
+        const shuffledImages = images.sort(() => Math.random() - 0.5);
+    
+        // Répartir les images sur 3 lignes
+        shuffledImages.forEach((src, index) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = src;
+            imgElement.alt = "Dataviz";
+            imgElement.onclick = function() { openFullscreen(this); };
+    
+            const item = document.createElement("div");
+            item.classList.add("dataviz-item");
+            item.appendChild(imgElement);
+    
+            rows[index % 3].appendChild(item.cloneNode(true)); // Double les images pour le défilement infini
+            rows[index % 3].appendChild(item);
+        });
+    });
+    
+    // === Gestion du mode plein écran ===
+    function openFullscreen(imgElement) {
+        console.log("Image cliquée :", imgElement.src);
+    
+        const fullscreenContainer = document.getElementById("fullscreen-container");
+        const fullscreenImg = document.getElementById("fullscreen-img");
+    
+        if (fullscreenContainer && fullscreenImg) {
+            fullscreenImg.src = imgElement.src;
+            fullscreenContainer.style.display = "flex";
+            fullscreenContainer.classList.add("fullscreen-visible");
+    
+            // ✅ Stoppe l'animation
+            document.querySelectorAll(".dataviz-row").forEach(row => row.classList.add("paused"));
+        }
+    }
+    
+    function closeFullscreen() {
+        console.log("Fermeture du plein écran");
+        const fullscreenContainer = document.getElementById("fullscreen-container");
+    
+        if (fullscreenContainer) {
+            fullscreenContainer.classList.remove("fullscreen-visible");
+            setTimeout(() => {
+                fullscreenContainer.style.display = "none";
+    
+                // ✅ Relance l'animation
+                document.querySelectorAll(".dataviz-row").forEach(row => row.classList.remove("paused"));
+            }, 300);
+        }
+    }
+    </script>
+
+
     <!-- FIN SECTION PATCHWORK GALLERY ANIME -->
     
     <!-- SECTION PATCHWORK GALLERY -->

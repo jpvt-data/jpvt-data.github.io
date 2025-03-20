@@ -501,3 +501,37 @@ footer {
     }
 }
 
+/* ANIMATION INTRO */
+.intro {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Titre fixe */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Conteneur du texte qui change */
+#text-container {
+    font-size: 22px;
+    font-weight: bold;
+    height: 40px; /* Taille fixe pour éviter les sauts */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Texte animé */
+#text-slide {
+    transition: opacity 0.5s ease-in-out; /* Effet de fondu */
+    position: absolute;
+    width: 100%;
+}
+
+/* FIN ANIMATION INTRO */
+

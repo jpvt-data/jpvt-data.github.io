@@ -688,6 +688,11 @@ footer {
 
 /* === Conteneur du mode plein écran === */
 #fullscreen-container {
+    z-index: 9999 !important;
+    position: fixed !important;
+}
+
+#fullscreen-container {
     position: fixed;
     top: 0;
     left: 0;

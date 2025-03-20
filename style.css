@@ -576,16 +576,17 @@ footer {
 
 /* Titre sous les logos */
 .skills-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
 /* Partie droite : Texte */
 .skills-text {
     max-width: 600px;
-    font-size: 16px;
+    text-align: justify;
+    font-size: 18px;
     line-height: 1.5;
 }
 

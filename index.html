@@ -130,7 +130,22 @@
         <span class="close-fullscreen" onclick="closeFullscreen()">&times;</span>
         <img id="fullscreen-img">
     </div>
+
+    <script>
+    function openFullscreen(imgElement) {
+        const fullscreenContainer = document.getElementById("fullscreen-container");
+        const fullscreenImg = document.getElementById("fullscreen-img");
     
+        fullscreenImg.src = imgElement.src; // ✅ Remplace l'image par celle cliquée
+        fullscreenContainer.classList.add("fullscreen-visible");
+    }
+    
+    function closeFullscreen() {
+        const fullscreenContainer = document.getElementById("fullscreen-container");
+        fullscreenContainer.classList.remove("fullscreen-visible");
+    }
+    </script>
+
     <!-- FIN SECTION PATCHWORK GALLERY -->
 
 

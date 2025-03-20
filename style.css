@@ -665,7 +665,6 @@ footer {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; /* ✅ Conserve les proportions, sans déformation */
-    transition: opacity 1.5s ease-in-out; /* ✅ Augmente le temps du fondu */
 }
 
 /* === Info au survol === */

@@ -1,6 +1,6 @@
 /* ========== Style global ========== */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -507,7 +507,7 @@ footer {
     padding: 50px 0;
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Titre fixe */

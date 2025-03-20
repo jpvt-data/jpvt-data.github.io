@@ -685,4 +685,44 @@ footer {
     opacity: 1;
 }
 
+/* === Conteneur du mode plein écran === */
+#fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* ✅ Fond sombre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Classe active pour afficher le plein écran */
+.fullscreen-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ✅ Image en plein écran */
+#fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ✅ Bouton de fermeture */
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
 /* === FIN PATCHWORK GALLERY === */

@@ -150,6 +150,10 @@ nav ul li a {
         display: none; /* Cache les | en version mobile */
     }
 }
+/* ========== Section Contact ========== */
+.social-banner h2 {
+        color: white;
+    }
 
 /* ========== Section Ã€ propos ========== */
 .about {

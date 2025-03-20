@@ -535,3 +535,51 @@ footer {
 
 /* FIN ANIMATION INTRO */
 
+
+
+/* === Section Compétences (Fond Noir) === */
+.skills-section {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Conteneur des logos + texte */
+.skills-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Partie gauche : Logos */
+.skills-logos {
+    display: flex;
+    gap: 20px; /* Espacement entre les logos */
+}
+
+.skills-logos img {
+    height: 60px; /* Taille des logos */
+    filter: brightness(1.2); /* Accentue le blanc sur fond noir */
+}
+
+/* Partie droite : Texte */
+.skills-text {
+    margin-left: 40px; /* Espace entre logos et texte */
+    max-width: 600px;
+}
+
+.skills-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.skills-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+

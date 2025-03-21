@@ -314,6 +314,7 @@ footer {
     }
 }
 
+/* ANIMATION INTRO */
 .intro {
     display: flex;
     flex-direction: column;
@@ -351,6 +352,8 @@ footer {
     transition: opacity 0.5s ease-in-out; /* ✅ Effet de fondu fluide */
     position: absolute;
     width: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out; /* ✅ Effet de fondu fluide */    
 }
 
 /* FIN ANIMATION INTRO */

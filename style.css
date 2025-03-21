@@ -294,17 +294,29 @@ nav ul li a {
     transition: transform 0.3s ease-in-out;
 }
 
-..project-category .btn {
-    background: #f5a623; /* ✅ Orange (peut être ajusté selon ton code couleur) */
-    color: #222; /* ✅ Texte foncé pour contraste */
-    border-radius: 8px;
-    padding: 12px 18px;
-    transition: background 0.3s;
+.project-category .btn {
+    display: block; /* ✅ Pour centrer le bouton */
+    width: fit-content; /* ✅ Ajuste la largeur au texte */
+    margin: 15px auto 0; /* ✅ Centre verticalement et horizontalement */
+    background: linear-gradient(135deg, #f5a623, #ff7b00); /* ✅ Dégradé doré/orangé */
+    color: white; /* ✅ Texte en blanc pour un bon contraste */
+    font-weight: bold; /* ✅ Texte plus visible */
+    text-transform: uppercase; /* ✅ Style premium */
+    padding: 12px 24px; /* ✅ Augmente l'espace pour un rendu plus aéré */
+    border-radius: 50px; /* ✅ Effet de bouton moderne et arrondi */
+    font-size: 1.1em; /* ✅ Taille agréable */
+    letter-spacing: 1px; /* ✅ Espacement pour un effet plus raffiné */
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* ✅ Ombre douce pour un effet 3D */
+    transition: all 0.3s ease-in-out; /* ✅ Animation fluide */
+    text-decoration: none; /* ✅ Supprime le soulignement */
 }
 
 .project-category .btn:hover {
-    background: #d88b1f; /* ✅ Assombrit légèrement au survol */
+    background: linear-gradient(135deg, #ff7b00, #d88b1f); /* ✅ Accentue le dégradé au survol */
+    box-shadow: 0px 6px 12px rgba(255, 123, 0, 0.5); /* ✅ Renforce l'effet 3D */
+    transform: translateY(-3px); /* ✅ Légère élévation pour un effet de clic */
 }
+
 
 /* ========== Pied de page ========== */
 footer {

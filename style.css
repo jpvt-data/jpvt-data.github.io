@@ -252,11 +252,10 @@ nav ul li a {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ✅ 3 par ligne */
-    gap: 40px; /* ✅ Espace plus grand entre chaque bloc */
-    padding: 50px 5%; /* ✅ Resserre la section et aère */
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px; /* ✅ Augmente l'espace entre les blocs */
 }
 
 /* ✅ Chaque projet = écrin précieux */
@@ -287,6 +286,7 @@ nav ul li a {
     transition: transform 0.3s ease-in-out;
     max-width: 250px; /* ✅ Taille un peu plus petite pour ne pas écraser le texte */
     height: auto; /* ✅ Garde le ratio */
+    margin-bottom: 15px; /* ✅ Réduit l’espace entre l’image et le texte */
 }
 
 .project-category:hover img {
@@ -297,17 +297,13 @@ nav ul li a {
 .project-category h3 {
     font-size: 1.4em;
     color: #fff; /* ✅ Texte blanc sobre */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: normal; /* ✅ Pas trop bold, plus léger */
 }
 
 /* ✅ Texte descriptif plus fin */
 .project-category p {
-    font-size: 1em;
-    color: #bbb; /* ✅ Gris clair pour un rendu élégant */
-    line-height: 1.6;
-    padding: 0 10px;
-    min-height: 120px; /* ✅ Ajuste en fonction de la longueur moyenne du texte */
+    min-height: 80px; /* ✅ Ajusté pour éviter trop d’espace */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,7 +324,7 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
     align-self: center;
-    margin-top: auto; /* ✅ Place le bouton en bas */
+    margin-top: 15px; /* ✅ Moins d'espace entre le texte et le bouton */
 }
 
 .project-category .btn:hover {

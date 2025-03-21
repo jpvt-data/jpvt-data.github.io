@@ -470,6 +470,26 @@ footer {
 
 
 /* === PATCHWORK GALLERY === */
+/* === Bandeau de la galerie Dataviz === */
+.dataviz-header {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px; /* ✅ Espace avec la section galerie */
+}
+
+.dataviz-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dataviz-header p {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
 .dataviz-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ Ajustement dynamique */

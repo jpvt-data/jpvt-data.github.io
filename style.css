@@ -15,12 +15,12 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 90px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 100px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -50,6 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 18px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -57,10 +58,11 @@ nav ul li a {
 
 /* ========== BANDEAU SOCIAL ========== */
 .social-banner {
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center; /* ✅ Centre verticalement les icônes */
     padding: 5px 0;
+    margin-top: 5px; /* ✅ Ajoute un peu d'espace sous le menu */
 }
 
 .social-icons {
@@ -179,11 +181,12 @@ nav ul li a {
     .social-icons {
         position: absolute;
         top: 50%;
-        right: 10px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
+        right: 15px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
         transform: translateY(-50%);
         display: flex;
         gap: 10px; /* ✅ Réduit l’espace pour que tout rentre */
         max-width: 100%; /* ✅ Évite tout dépassement */
+        align-items: center;
     }
 
     .social-icons img {

@@ -52,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 16px; /* ✅ Augmente la taille du texte du menu */
+    font-size: 14px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
     font-weight: normal;
@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 .social-icons img {
-    width: 20px;
+    width: 30px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }

@@ -323,7 +323,6 @@ footer {
     justify-content: center; /* ✅ Centre verticalement */
     align-items: center; /* ✅ Centre horizontalement */
     margin-top: 80px;
-    margin-bottom: 20px;
     padding: 90px 0; /* ✅ Espace suffisant pour tout afficher */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;

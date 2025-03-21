@@ -476,12 +476,12 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 30px; /* ✅ Espace avec la section galerie */
+    margin-top: 20px;
 }
 
 .dataviz-header h2 {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
 }
 

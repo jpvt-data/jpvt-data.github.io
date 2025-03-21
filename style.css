@@ -235,6 +235,10 @@ nav ul li a {
 }
 
 /* ========== Section Projets ========== */
+#projets-data-titre {
+    margin-bottom: 20px; /* ✅ Ajoute un espace sous le titre */
+}
+
 .projects {
     padding: 50px 20px;
     background: #fff;
@@ -248,17 +252,18 @@ nav ul li a {
 
 .project-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* ✅ Ajuste l'espacement pour éviter les gros écarts */
     flex-wrap: wrap;
 }
 
 .project-category {
     width: 30%;
-    padding: 20px;
-    background: #f9f9f9;
+    padding: 25px;
+    background: #222; /* ✅ Gris anthracite */
+    color: white; /* ✅ Texte en blanc */
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    text-align: justify;
     margin-bottom: 20px;
 }
 
@@ -266,34 +271,36 @@ nav ul li a {
     height: 300px;
     width: 300px;
     object-fit: cover;
+    border: 2px solid white;
     margin-bottom: 15px;
     border-radius: 8px;
 }
 
 .project-category h3 {
     font-size: 1.6em;
-    color: #222;
+    color: #f5a623; /* ✅ Accentuer les titres en orange */
 }
 
 .project-category p {
     font-size: 1.1em;
-    color: #555;
+    color: #ddd; /* ✅ Texte légèrement plus doux que blanc pur */
 }
 
-.project-category .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 16px;
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+.project-category:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+..project-category .btn {
+    background: #f5a623; /* ✅ Orange (peut être ajusté selon ton code couleur) */
+    color: #222; /* ✅ Texte foncé pour contraste */
+    border-radius: 8px;
+    padding: 12px 18px;
     transition: background 0.3s;
 }
 
 .project-category .btn:hover {
-    background: #0056b3;
+    background: #d88b1f; /* ✅ Assombrit légèrement au survol */
 }
 
 /* ========== Pied de page ========== */

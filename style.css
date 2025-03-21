@@ -342,7 +342,7 @@ footer {
     height: 60px; /* ✅ Taille suffisante pour le texte animé */
     overflow: hidden;
     position: relative;
-    display: flex;
+    /* display: flex;
     align-items: center; /* ✅ Centre verticalement le texte animé */
 }
 

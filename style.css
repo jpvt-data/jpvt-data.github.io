@@ -365,7 +365,7 @@ footer {
 .skills-section {
     background-color: black;
     color: white;
-    padding: 0;
+    padding: 40px;
     display: flex;
     justify-content: center;
 }
@@ -605,13 +605,4 @@ footer {
 
 
 /* === FIN PATCHWORK GALLERY === */
-
-/* === ESPACE ENTRE LES SECTIONS === */
-.intro {
-    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous l'intro */
-}
-
-.social-banner {
-    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous le bandeau social */
-}
 

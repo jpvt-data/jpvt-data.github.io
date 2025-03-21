@@ -331,14 +331,14 @@ footer {
 
 /* Titre fixe */
 .title {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
 /* Conteneur du texte qui change */
 #text-container {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
     height: 60px; /* ✅ Hauteur fixe pour éviter les sauts */
     overflow: hidden;

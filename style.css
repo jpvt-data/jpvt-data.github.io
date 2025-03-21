@@ -317,9 +317,9 @@ footer {
 /* ANIMATION INTRO */
 .intro {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 20px;
-    padding: 90px 0;
+    padding: 80px 0;
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;
     font-family: 'Montserrat', sans-serif;

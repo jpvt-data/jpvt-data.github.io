@@ -94,17 +94,20 @@
     const textContainer = document.getElementById("text-slide");
     
     function changeText() {
-        textContainer.style.opacity = 0; // Effet de fondu avant changement
+        textContainer.style.opacity = 0; // ✅ Début du fade-out
     
         setTimeout(() => {
-            index = (index + 1) % texts.length;
+            index = (index + 1) % texts.length; // ✅ Change le texte après un délai
             textContainer.innerText = texts[index];
-            textContainer.style.opacity = 1;
-        }, 600); // Temps du fondu (500ms)
+    
+            setTimeout(() => {
+                textContainer.style.opacity = 1; // ✅ Applique le fade-in progressif
+            }, 300); // ✅ Délai entre le changement de texte et l'apparition
+        }, 500); // ✅ Laisse le texte "disparaître" avant de changer
     }
     
     // Changer toutes les 3 secondes (temps de lecture)
-    setInterval(changeText, 3000);
+    setInterval(changeText, 4000);
     </script>
 
     <!-- FIN Intro déroulante -->

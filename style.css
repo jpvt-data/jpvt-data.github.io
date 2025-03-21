@@ -318,45 +318,47 @@ footer {
 .intro {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* ✅ Centre le contenu verticalement */
-    align-items: center; /* ✅ Centre le texte horizontalement */
+    justify-content: center; /* ✅ Centre verticalement */
+    align-items: center; /* ✅ Centre horizontalement */
     margin-top: 100px;
     margin-bottom: 20px;
-    padding: 100px 0; /* ✅ Augmente le padding pour mieux encadrer le texte */
+    padding: 100px 0; /* ✅ Espace suffisant pour tout afficher */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;
     font-family: 'Montserrat', sans-serif;
-    height: auto; /* ✅ Laisse la hauteur s'ajuster naturellement */
+    height: auto; /* ✅ Assure que la hauteur s'ajuste dynamiquement */
 }
 
 /* Titre fixe */
 .title {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px; /* ✅ Ajusté pour éviter un trop grand espace */
+    margin-bottom: 25px;
 }
 
 /* Conteneur du texte qui change */
 #text-container {
     font-size: 22px;
     font-weight: bold;
-    height: 60px; /* ✅ Taille suffisante pour le texte animé */
+    height: 60px; /* ✅ Hauteur fixe pour éviter les sauts */
     overflow: hidden;
-    position: relative;
-    /* display: flex;
-    align-items: center; /* ✅ Centre verticalement le texte animé */
+    position: relative; /* ✅ Essentiel pour l'animation */
+    width: 100%;
 }
 
 /* Texte animé */
 #text-slide {
-    transition: opacity 0.5s ease-in-out; /* ✅ Effet de fondu fluide */
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     text-align: center;
-    transition: opacity 0.5s ease-in-out; /* ✅ Effet de fondu fluide */    
+    transition: opacity 1s ease-in-out; /* ✅ Augmente la durée pour un meilleur effet */
+    opacity: 1; /* ✅ Doit être visible au départ */
 }
 
 /* FIN ANIMATION INTRO */
+
 
 /* === Section Skills (Fond Noir) === */
 .skills-section {

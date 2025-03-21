@@ -9,6 +9,14 @@ body {
     scroll-behavior: smooth;   /* ✅ Pour un défilement fluide */
 }
 
+section::before {
+    content: "";
+    display: block;
+    height: 110px; /* ✅ Hauteur de ton header fixe */
+    margin-top: -110px; /* ✅ Décale la section vers le haut */
+    visibility: hidden;
+}
+
 .separator {
     color: white;
     font-weight: bold;

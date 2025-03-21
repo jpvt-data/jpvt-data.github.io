@@ -273,7 +273,6 @@ nav ul li a {
     height: 250px; /* ✅ Réduction de la hauteur */
     width: 250px; /* ✅ Réduction de la largeur */
     object-fit: contain; /* ✅ Garde l'image entière sans la couper */
-    border: 2px solid white;
     border-radius: 8px;
 }
 

@@ -166,12 +166,16 @@ nav ul li a {
 /* === Affichage du menu mobile === */
 @media (max-width: 768px) {
     header {
-        height: 70px; /* ✅ Agrandit le bandeau noir */
+        height: 70px; /* ✅ Ajuste la hauteur du header */
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding: 0 15px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
     }
     
     .close-menu {
@@ -189,18 +193,14 @@ nav ul li a {
         display: block; /* ✅ Affiche l'icône hamburger */
     }
 
-   .social-banner {
-        width: auto;
-        display: flex;
-        justify-content: flex-end;
-    }
 
     .social-icons {
         display: flex;
-        gap: 15px;
+        gap: 12px;
+        position: absolute;
         right: 15px; /* ✅ Place les icônes à droite */
         top: 50%;
-        transform: translateY(-50%); /* ✅ Centre verticalement les icônes */
+        transform: translateY(-50%); /* ✅ Centre verticalement */
     }
 
     .social-icons img {

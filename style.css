@@ -732,6 +732,29 @@ footer {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .dataviz-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 images par ligne */
+        gap: 10px; /* ✅ Réduit l'espacement */
+        padding: 10px; /* ✅ Réduction des marges */
+        overflow: hidden; /* ✅ Empêche le scroll infini */
+        max-height: 600px; /* ✅ Limite la hauteur totale */
+        position: relative;
+    }
+
+    .dataviz-item {
+        height: 150px; /* ✅ Ajuste la hauteur pour optimiser */
+        padding: 5px;
+    }
+
+    .dataviz-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ✅ Ajuste l'image sans déformation */
+    }
+}
+
 /* === FIN PATCHWORK GALLERY === */
 
 /* === BANDEAU SOCIAL === */

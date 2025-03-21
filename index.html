@@ -300,6 +300,35 @@
         </div>     
     </section>
     
+    <!-- SCRIPT Carrousel en mode mobile -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const allItems = Array.from(document.querySelectorAll(".dataviz-item"));
+        
+        function shuffleGallery() {
+            let selectedItems = allItems.slice(0, 6); // ✅ Seulement 6 images affichées à la fois
+            
+            allItems.forEach(item => item.style.display = "none"); // ✅ Cache toutes les images
+            selectedItems.forEach(item => item.style.display = "block"); // ✅ Affiche les 6 images sélectionnées
+    
+            setInterval(() => {
+                selectedItems.forEach(item => item.style.opacity = "0"); // ✅ Début du fondu
+    
+                setTimeout(() => {
+                    let newItems = allItems.sort(() => 0.5 - Math.random()).slice(0, 6); // ✅ Nouveau tirage
+                    allItems.forEach(item => item.style.display = "none"); // ✅ Cache tout
+                    newItems.forEach(item => item.style.display = "block"); // ✅ Affiche le nouveau lot
+                    newItems.forEach(item => item.style.opacity = "1"); // ✅ Apparition en fondu
+                }, 1500);
+            }, 10000); // ✅ Changement toutes les 10s
+        }
+    
+        if (window.innerWidth < 768) {
+            shuffleGallery();
+        }
+    });
+    </script>
+
     <!-- SCRIPT GRAND ECRAN DES IMAGES DU PATCHWORK -->
 
     <!-- Conteneur pour l'affichage en plein écran -->

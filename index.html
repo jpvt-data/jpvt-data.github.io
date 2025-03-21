@@ -306,20 +306,22 @@
         const allItems = Array.from(document.querySelectorAll(".dataviz-item"));
         
         function shuffleGallery() {
-            let selectedItems = allItems.slice(0, 6); // ✅ Seulement 6 images affichées à la fois
-            
+            let selectedItems = allItems.slice(0, 10); // ✅ Affiche 10 images à la fois
+    
             allItems.forEach(item => item.style.display = "none"); // ✅ Cache toutes les images
-            selectedItems.forEach(item => item.style.display = "block"); // ✅ Affiche les 6 images sélectionnées
+            selectedItems.forEach(item => item.style.display = "block"); // ✅ Affiche le premier lot
     
             setInterval(() => {
-                selectedItems.forEach(item => item.style.opacity = "0"); // ✅ Début du fondu
+                selectedItems.forEach(item => {
+                    item.style.opacity = "0"; // ✅ Début du fondu lent
     
-                setTimeout(() => {
-                    let newItems = allItems.sort(() => 0.5 - Math.random()).slice(0, 6); // ✅ Nouveau tirage
-                    allItems.forEach(item => item.style.display = "none"); // ✅ Cache tout
-                    newItems.forEach(item => item.style.display = "block"); // ✅ Affiche le nouveau lot
-                    newItems.forEach(item => item.style.opacity = "1"); // ✅ Apparition en fondu
-                }, 1500);
+                    setTimeout(() => {
+                        let newItems = allItems.sort(() => 0.5 - Math.random()).slice(0, 10); // ✅ Nouveau lot
+                        allItems.forEach(i => i.style.display = "none"); // ✅ Cache tout
+                        newItems.forEach(i => i.style.display = "block"); // ✅ Affiche les nouvelles images
+                        newItems.forEach(i => i.style.opacity = "1"); // ✅ Apparition fluide
+                    }, 2000); // ✅ Temps du fondu lent
+                });
             }, 10000); // ✅ Changement toutes les 10s
         }
     

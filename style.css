@@ -246,7 +246,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px; /* ✅ Espacement entre les blocs */
+    gap: 30px; /* ✅ Espacement entre les blocs */
     padding: 0 5%; /* ✅ Ajuste l’espace latéral */
 }
 
@@ -262,7 +262,7 @@ nav ul li a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 30%; /* ✅ Toujours 3 blocs par ligne */
+    width: 31%; /* ✅ Toujours 3 blocs par ligne */
     min-height: 450px; /* ✅ Fixe la hauteur pour un alignement parfait */
 }
 
@@ -333,6 +333,13 @@ nav ul li a {
 }
 
 /* ========== ADAPTATION MOBILE ========== */
+/* ✅ Vérifie la version mobile */
+@media (max-width: 1024px) {
+    .project-category {
+        width: 47%; /* ✅ Passe en 2 colonnes */
+    }
+}
+
 @media (max-width: 768px) {
     .project-container {
         flex-direction: column;

@@ -599,7 +599,8 @@
             if (targetElement) {
                 const scrollDuration = 1000; // Durée en millisecondes (1200ms = 1.2 secondes)
                 const startPosition = window.pageYOffset;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const headerOffset = document.querySelector("header").offsetHeight; // ✅ Hauteur du header
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
                 const distance = targetPosition - startPosition;
                 let startTime = null;
     

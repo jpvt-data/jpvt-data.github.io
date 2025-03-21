@@ -52,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 22px; /* ✅ Augmente la taille du texte du menu */
+    font-size: 18px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
     font-weight: bold;

@@ -466,11 +466,8 @@ footer {
     }
 }
 
-
-
-/* === PATCHWORK GALLERY === */
-/* === Bandeau de la galerie Dataviz === */
-.dataviz-header {
+/* === TITRE DES SECTIONS === */
+.section-titre {
     background: black;
     color: white;
     text-align: center;
@@ -478,11 +475,15 @@ footer {
     margin-top: 40px;
 }
 
-.dataviz-header h2 {
+.section-titre h2 {
     font-size: 28px;
     font-weight: normal;
     margin: 0;
 }
+/* === FIN TITRE DES SECTIONS === */
+
+/* === PATCHWORK GALLERY === */
+/* === Bandeau de la galerie Dataviz === */
 
 .dataviz-gallery {
     display: grid;

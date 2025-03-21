@@ -59,7 +59,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -71,6 +71,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px; /* Espace entre le menu et les icônes */
 }
 
 nav ul {
@@ -197,10 +198,13 @@ nav ul li a {
     .social-icons {
         display: flex;
         gap: 15px;
+        right: 15px; /* ✅ Place les icônes à droite */
+        top: 50%;
+        transform: translateY(-50%); /* ✅ Centre verticalement les icônes */
     }
 
     .social-icons img {
-        width: 25px; /* ✅ Icônes sociales légèrement plus petites */
+        width: 30px; /* ✅ Icônes sociales légèrement plus petites */
         height: auto;
     }
     

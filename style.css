@@ -268,11 +268,12 @@ nav ul li a {
 }
 
 .project-category img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
+    display: block; /* ✅ Évite les marges indésirables */
+    margin: 0 auto; /* ✅ Centre l'image horizontalement */
+    height: 250px; /* ✅ Réduction de la hauteur */
+    width: 250px; /* ✅ Réduction de la largeur */
+    object-fit: contain; /* ✅ Garde l'image entière sans la couper */
     border: 2px solid white;
-    margin-bottom: 15px;
     border-radius: 8px;
 }
 

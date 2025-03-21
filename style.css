@@ -509,7 +509,8 @@ footer {
 /* ANIMATION INTRO */
 .intro {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     padding: 80px 0;
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;

@@ -243,11 +243,12 @@ nav ul li a {
 
 /* ✅ Structure principale */
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ FORCÉ à 3 colonnes */
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 5px; /* ✅ Espacement entre les blocs */
-    padding: 0 3%; /* ✅ Ajuste l’espace latéral */
+    gap: 10px; /* ✅ Espacement entre les blocs */
+    padding: 0 2%; /* ✅ Ajuste l’espace latéral */
 }
 
 /* ✅ Chaque projet est un écrin précieux */
@@ -263,7 +264,7 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
     width: calc(33.333% - 10px); /* ✅ Assure 3 blocs par ligne sans débordement */
-    min-height: 460px; /* ✅ Fixe la hauteur pour un alignement parfait */
+    min-height: 480px; /* ✅ Fixe la hauteur pour un alignement parfait */
 }
 
 /* ✅ Effet de survol subtil */
@@ -301,7 +302,7 @@ nav ul li a {
     font-size: 1em;
     color: #ccc;
     line-height: 1.6;
-    min-height: 100px; /* ✅ Évite les écarts de hauteur */
+    min-height: 120px; /* ✅ Évite les écarts de hauteur */
     display: flex;
     align-items: center;
     justify-content: center;

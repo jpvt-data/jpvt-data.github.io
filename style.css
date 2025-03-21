@@ -630,14 +630,15 @@ footer {
     }
 
     .skills-logos {
-        justify-content: center; /* ✅ Centre les logos */
-        gap: 10px; /* ✅ Réduit l’espace entre les logos */
-        max-width: 100%;
+        display: flex;
+        flex-direction: column; /* ✅ Affiche les logos en colonne */
+        align-items: center; /* ✅ Centre les logos */
+        gap: 20px; /* ✅ Espacement plus large entre chaque logo */
     }
 
     .skills-logos img {
-        height: 40px; /* ✅ Réduit légèrement la taille des logos pour s'adapter */
-        max-width: 80px; /* ✅ Empêche que les images dépassent */
+        height: 60px; /* ✅ Réduit légèrement la taille des logos pour s'adapter */
+        max-width: 100px; /* ✅ Empêche que les images dépassent */
     }
 }
 

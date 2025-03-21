@@ -167,7 +167,7 @@ nav ul li a {
     .close-menu {
         display: block; /* ✅ Affiche la croix seulement en mobile */
         position: absolute;
-        top: 15px;
+        top: 30px;
         right: 20px; /* ✅ Ajoute une marge pour ne pas être collé */
         font-size: 25px;
         color: white; /* ✅ Assure que la croix est bien blanche */

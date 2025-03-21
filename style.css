@@ -285,6 +285,7 @@ nav ul li a {
 
 .project-category p {
     font-size: 1.1em;
+    text-align: justify;
     color: #ddd; /* ✅ Texte légèrement plus doux que blanc pur */
 }
 

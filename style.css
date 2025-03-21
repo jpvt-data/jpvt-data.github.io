@@ -245,9 +245,7 @@ nav ul li a {
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* ✅ FORCÉ à 3 colonnes */
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px; /* ✅ Espacement entre les blocs */
+    gap: 30px; /* ✅ Espacement entre les blocs */
     padding: 0 2%; /* ✅ Ajuste l’espace latéral */
 }
 
@@ -263,8 +261,7 @@ nav ul li a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: calc(33.333% - 10px); /* ✅ Assure 3 blocs par ligne sans débordement */
-    min-height: 480px; /* ✅ Fixe la hauteur pour un alignement parfait */
+    height: 550px; /* ✅ Fixe une hauteur cohérente */
 }
 
 /* ✅ Effet de survol subtil */
@@ -302,15 +299,13 @@ nav ul li a {
     font-size: 1em;
     color: #ccc;
     line-height: 1.6;
-    min-height: 120px; /* ✅ Évite les écarts de hauteur */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100px; /* ✅ Évite les écarts de hauteur */
+    text-align: justify;
 }
 
 /* ✅ Bouton raffiné */
 .project-category .btn {
-    display: inline-block;
+    margin-top: auto; /* ✅ Fixe le bouton en bas */
     padding: 10px 22px;
     background: none;
     color: #ffb347;
@@ -322,8 +317,6 @@ nav ul li a {
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    align-self: center;
-    margin-top: 15px;
 }
 
 /* ✅ Effet interactif du bouton */

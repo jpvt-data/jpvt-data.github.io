@@ -5,7 +5,7 @@ body {
     padding: 0;
     text-align: center;
     background: #f5f5f5;
-    scroll-padding-top: 100px; /* ✅ Correspond à la hauteur de ton header fixe */
+    scroll-padding-top: 110px; /* ✅ Correspond à la hauteur de ton header fixe */
     scroll-behavior: smooth;   /* ✅ Pour un défilement fluide */
 }
 
@@ -17,7 +17,7 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 100px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 110px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 22px; /* ✅ Augmente la taille du texte du menu */
+    font-size: 28px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -64,7 +64,7 @@ nav ul li a {
     justify-content: center;
     align-items: center; /* ✅ Centre verticalement les icônes */
     padding: 5px 0;
-    margin-top: 5px; /* ✅ Ajoute un peu d'espace sous le menu */
+    margin-top: 10px; /* ✅ Ajoute un peu d'espace sous le menu */
 }
 
 .social-icons {
@@ -322,7 +322,7 @@ footer {
     flex-direction: column;
     justify-content: center; /* ✅ Centre verticalement */
     align-items: center; /* ✅ Centre horizontalement */
-    margin-top: 100px;
+    margin-top: 110px;
     margin-bottom: 20px;
     padding: 100px 0; /* ✅ Espace suffisant pour tout afficher */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);

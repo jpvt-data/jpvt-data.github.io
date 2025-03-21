@@ -637,8 +637,9 @@ footer {
     }
 
     .skills-logos img {
-        height: 60px; /* ✅ Réduit légèrement la taille des logos pour s'adapter */
+        height: auto; /* ✅ Réduit légèrement la taille des logos pour s'adapter */
         max-width: 100px; /* ✅ Empêche que les images dépassent */
+        height: auto; /* ✅ Garde le ratio d'origine */
     }
 }
 

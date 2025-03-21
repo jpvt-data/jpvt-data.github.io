@@ -365,7 +365,7 @@ footer {
 .skills-section {
     background-color: black;
     color: white;
-    padding: 40px 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }

@@ -12,45 +12,6 @@ body {
     font-weight: bold;
 }
 
-/* ========== Ancien En-tÃªte ========== */
-/*header {
-    background: #222;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-
-/* ========== Navigation ========== 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-    color: white;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-}*/
-
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
@@ -115,6 +76,27 @@ nav ul li a {
 
 .social-icons img:hover {
     transform: scale(1.2);
+}
+
+/* === Texte au survol === */
+.icon-text {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8); /* ✅ Fond semi-transparent */
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.icon-link:hover .icon-text {
+    opacity: 1; /* ✅ Affichage du texte au survol */
 }
 
 /* === Icône du menu hamburger === */
@@ -856,55 +838,6 @@ footer {
 
 
 /* === FIN PATCHWORK GALLERY === */
-
-/* === BANDEAU SOCIAL === */
-/*.social-banner {
-    background: black;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.icon-link {
-    position: relative;
-    display: inline-block;
-}
-
-.icon-link img {
-    width: 40px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.icon-link:hover img {
-    transform: scale(1.2);
-}*/
-
-/* === Texte au survol === */
-.icon-text {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.8); /* ✅ Fond semi-transparent */
-    color: black;
-    font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none;
-}
-
-.icon-link:hover .icon-text {
-    opacity: 1; /* ✅ Affichage du texte au survol */
-}
 
 /* === ESPACE ENTRE LES SECTIONS === */
 .intro {

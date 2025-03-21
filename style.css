@@ -17,7 +17,7 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 80px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 90px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;

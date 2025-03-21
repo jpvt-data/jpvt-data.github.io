@@ -314,36 +314,41 @@ footer {
     }
 }
 
-/* ANIMATION INTRO */
 .intro {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ✅ Centre le contenu verticalement */
+    align-items: center; /* ✅ Centre le texte horizontalement */
     margin-top: 100px;
     margin-bottom: 20px;
-    padding: 80px 0;
+    padding: 100px 0; /* ✅ Augmente le padding pour mieux encadrer le texte */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;
     font-family: 'Montserrat', sans-serif;
+    height: auto; /* ✅ Laisse la hauteur s'ajuster naturellement */
 }
 
 /* Titre fixe */
 .title {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* ✅ Ajusté pour éviter un trop grand espace */
 }
 
 /* Conteneur du texte qui change */
 #text-container {
     font-size: 22px;
     font-weight: bold;
-    height: 60px; /* Taille fixe pour éviter les sauts */
+    height: 60px; /* ✅ Taille suffisante pour le texte animé */
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center; /* ✅ Centre verticalement le texte animé */
 }
 
 /* Texte animé */
 #text-slide {
-    transition: opacity 0.5s ease-in-out; /* Effet de fondu */
+    transition: opacity 0.5s ease-in-out; /* ✅ Effet de fondu fluide */
     position: absolute;
     width: 100%;
 }

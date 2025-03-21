@@ -17,7 +17,7 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 110px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 100px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 24px; /* ✅ Augmente la taille du texte du menu */
+    font-size: 22px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 .social-icons img {
-    width: 40px;
+    width: 30px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -322,7 +322,7 @@ footer {
     flex-direction: column;
     justify-content: center; /* ✅ Centre verticalement */
     align-items: center; /* ✅ Centre horizontalement */
-    margin-top: 110px;
+    margin-top: 100px;
     margin-bottom: 20px;
     padding: 100px 0; /* ✅ Espace suffisant pour tout afficher */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
@@ -333,14 +333,14 @@ footer {
 
 /* Titre fixe */
 .title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 25px;
 }
 
 /* Conteneur du texte qui change */
 #text-container {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     height: 60px; /* ✅ Hauteur fixe pour éviter les sauts */
     overflow: hidden;
@@ -400,7 +400,7 @@ footer {
 
 /* Titre sous les logos */
 .skills-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     margin-top: 30px;
     text-align: center;
@@ -410,7 +410,7 @@ footer {
 .skills-text {
     max-width: 600px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 

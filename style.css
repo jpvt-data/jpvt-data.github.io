@@ -17,7 +17,7 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 100px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 80px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +55,7 @@ nav ul li a {
     font-size: 16px; /* ✅ Augmente la taille du texte du menu */
     color: white;
     text-decoration: none;
+    font-weight: normal;
 }
 
 /* ========== BANDEAU SOCIAL ========== */
@@ -72,7 +73,7 @@ nav ul li a {
 }
 
 .social-icons img {
-    width: 30px;
+    width: 20px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -144,7 +145,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /* === Mode Mobile : Affichage du menu hamburger et menu caché === */
@@ -182,7 +183,7 @@ nav ul li a {
     .social-icons {
         position: absolute;
         top: 50%;
-        right: 15px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
+        right: 30px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
         transform: translateY(-50%);
         display: flex;
         gap: 10px; /* ✅ Réduit l’espace pour que tout rentre */
@@ -321,9 +322,9 @@ footer {
     flex-direction: column;
     justify-content: center; /* ✅ Centre verticalement */
     align-items: center; /* ✅ Centre horizontalement */
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 20px;
-    padding: 100px 0; /* ✅ Espace suffisant pour tout afficher */
+    padding: 90px 0; /* ✅ Espace suffisant pour tout afficher */
     background: linear-gradient(to bottom, #68a0b4, #a1c4fd);
     color: white;
     font-family: 'Montserrat', sans-serif;

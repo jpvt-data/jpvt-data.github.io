@@ -237,86 +237,84 @@ nav ul li a {
 /* ========== SECTION PROJETS DATA ========== */
 
 #projets-data-titre {
-    margin-bottom: 20px; /* ✅ Ajoute un espace sous le titre */
+    margin-bottom: 40px; /* ✅ Ajoute un espace suffisant sous le titre */
+    text-align: center;
 }
 
-.projects {
-    padding: 50px 20px;
-    background: #fff;
-}
-
-.projects h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
+/* ✅ Structure principale */
 .project-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px; /* ✅ Augmente l'espace entre les blocs */
+    gap: 40px; /* ✅ Espacement entre les blocs */
+    padding: 0 5%; /* ✅ Ajuste l’espace latéral */
 }
 
-/* ✅ Chaque projet = écrin précieux */
+/* ✅ Chaque projet est un écrin précieux */
 .project-category {
-    background: #1c1c1c; /* ✅ Gris anthracite chic */
-    padding: 30px;
-    border-radius: 15px; /* ✅ Arrondi subtil */
-    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* ✅ Effet 3D léger */
+    background: #1c1c1c; /* ✅ Fond sombre premium */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* ✅ Assure que tous les blocs sont bien équilibrés */
+    justify-content: space-between;
     align-items: center;
-    height: 100%; /* ✅ Tous les blocs auront la même hauteur */
+    width: 30%; /* ✅ Toujours 3 blocs par ligne */
+    min-height: 450px; /* ✅ Fixe la hauteur pour un alignement parfait */
 }
 
+/* ✅ Effet de survol subtil */
 .project-category:hover {
-    transform: translateY(-5px); /* ✅ Effet de lévitation subtile */
-    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.2); /* ✅ Effet plus premium */
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.15);
 }
 
-/* ✅ Images plus petites et aérées */
+/* ✅ Images élégantes et centrées */
 .project-category img {
     object-fit: cover;
     border-radius: 12px;
-    border: 3px solid rgba(255, 255, 255, 0.2); /* ✅ Léger effet cadre */
+    border: 3px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
-    max-width: 250px; /* ✅ Taille un peu plus petite pour ne pas écraser le texte */
-    height: auto; /* ✅ Garde le ratio */
-    margin-bottom: 15px; /* ✅ Réduit l’espace entre l’image et le texte */
+    max-width: 220px; /* ✅ Ajuste la taille des images */
+    height: auto;
+    margin-bottom: 10px;
 }
 
+/* ✅ Effet zoom léger sur image au survol */
 .project-category:hover img {
-    transform: scale(1.05); /* ✅ Effet subtil au survol */
+    transform: scale(1.05);
 }
 
-/* ✅ Titre du projet raffiné */
+/* ✅ Titre raffiné et bien positionné */
 .project-category h3 {
-    font-size: 1.4em;
-    color: #fff; /* ✅ Texte blanc sobre */
-    margin-bottom: 15px;
-    font-weight: normal; /* ✅ Pas trop bold, plus léger */
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
-/* ✅ Texte descriptif plus fin */
+/* ✅ Texte descriptif équilibré */
 .project-category p {
-    min-height: 80px; /* ✅ Ajusté pour éviter trop d’espace */
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.6;
+    min-height: 100px; /* ✅ Évite les écarts de hauteur */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* ✅ BOUTON plus subtil et raffiné */
+/* ✅ Bouton raffiné */
 .project-category .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 22px;
     background: none;
-    color: #ffb347; /* ✅ Orange raffiné, pas criard */
+    color: #ffb347;
     border: 2px solid #ffb347;
-    border-radius: 30px; /* ✅ Bouton doux et arrondi */
+    border-radius: 30px;
     font-weight: normal;
     font-size: 1em;
     text-transform: uppercase;
@@ -324,54 +322,47 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
     align-self: center;
-    margin-top: 15px; /* ✅ Moins d'espace entre le texte et le bouton */
+    margin-top: 15px;
 }
 
+/* ✅ Effet interactif du bouton */
 .project-category .btn:hover {
-    background: #ffb347; /* ✅ Passe en plein doré au survol */
+    background: #ffb347;
     color: #1c1c1c;
     box-shadow: 0px 6px 12px rgba(255, 179, 71, 0.5);
 }
 
-/* ========== ADAPTATION PROJECTS VERSION MOBILE ========== */
+/* ========== ADAPTATION MOBILE ========== */
 @media (max-width: 768px) {
     .project-container {
-        grid-template-columns: 1fr; /* ✅ 1 projet par ligne */
-        gap: 30px; /* ✅ Espace suffisant entre les blocs */
-        padding: 30px 8%; /* ✅ Resserre les marges */
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 
     .project-category {
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1); /* ✅ Ombrage plus doux */
+        width: 90%; /* ✅ Plus compact en mobile */
+        min-height: auto; /* ✅ Ajuste dynamiquement */
+        padding: 20px;
     }
 
-    /* ✅ Images plus petites mais toujours visibles */
     .project-category img {
-        height: 180px; /* ✅ Moins imposant */
-        width: 180px;
-        border-radius: 10px;
+        max-width: 180px;
     }
 
-    /* ✅ Titre plus compact */
     .project-category h3 {
-        font-size: 1.2em; /* ✅ Réduit mais toujours visible */
-        margin-bottom: 8px;
+        font-size: 1.2em;
     }
 
-    /* ✅ Texte bien lisible mais pas envahissant */
     .project-category p {
-        font-size: 0.9em; /* ✅ Réduit mais confortable */
-        line-height: 1.5;
-        padding: 0 8px;
+        font-size: 0.95em;
+        padding: 0 5px;
     }
 
-    /* ✅ Bouton plus discret et bien intégré */
     .project-category .btn {
         padding: 8px 16px;
         font-size: 0.9em;
-        border-radius: 25px; /* ✅ Arrondi doux */
+        border-radius: 25px;
     }
 }
 

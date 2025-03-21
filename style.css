@@ -7,6 +7,11 @@ body {
     background: #f5f5f5;
 }
 
+html {
+    scroll-padding-top: 100px; /* ✅ Correspond à la hauteur de ton header fixe */
+    scroll-behavior: smooth;   /* ✅ Pour un défilement fluide */
+}
+
 .separator {
     color: white;
     font-weight: bold;
@@ -421,6 +426,11 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 22px
+    }
+    
+    .title {
+        font-size: 28px; /* ✅ Titre plus petit en mobile */
     }
 
     #text-slide {

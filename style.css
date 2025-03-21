@@ -246,7 +246,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px; /* ✅ Espacement entre les blocs */
+    gap: 20px; /* ✅ Espacement entre les blocs */
     padding: 0 5%; /* ✅ Ajuste l’espace latéral */
 }
 

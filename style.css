@@ -333,12 +333,6 @@ nav ul li a {
 }
 
 /* ========== ADAPTATION MOBILE ========== */
-/* ✅ Vérifie la version mobile */
-@media (max-width: 1024px) {
-    .project-category {
-        width: 47%; /* ✅ Passe en 2 colonnes */
-    }
-}
 
 @media (max-width: 768px) {
     .project-container {

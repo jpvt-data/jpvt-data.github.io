@@ -312,17 +312,32 @@
             selectedItems.forEach(item => item.style.display = "block"); // ✅ Affiche le premier lot
     
             setInterval(() => {
+                // ✅ Sélectionner les images actuellement visibles
                 selectedItems.forEach(item => {
-                    item.style.opacity = "0"; // ✅ Début du fondu lent
-    
-                    setTimeout(() => {
-                        let newItems = allItems.sort(() => 0.5 - Math.random()).slice(0, 10); // ✅ Nouveau lot
-                        allItems.forEach(i => i.style.display = "none"); // ✅ Cache tout
-                        newItems.forEach(i => i.style.display = "block"); // ✅ Affiche les nouvelles images
-                        newItems.forEach(i => i.style.opacity = "1"); // ✅ Apparition fluide
-                    }, 2000); // ✅ Temps du fondu lent
+                    item.style.transition = "opacity 2s ease-in-out"; // ✅ Applique le fade-out lent
+                    item.style.opacity = "0"; // ✅ Début du fondu de disparition
                 });
-            }, 10000); // ✅ Changement toutes les 10s
+            
+                setTimeout(() => {
+                    // ✅ Sélectionner un nouveau lot d'images après le fade-out
+                    let newItems = allItems.sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+                    // ✅ Masquer toutes les images avant d'afficher les nouvelles
+                    allItems.forEach(i => i.style.display = "none");
+            
+                    // ✅ Afficher le nouveau lot avec un fade-in progressif
+                    newItems.forEach(i => {
+                        i.style.display = "block";
+                        i.style.transition = "opacity 2s ease-in-out"; // ✅ Applique le fade-in lent
+                        setTimeout(() => {
+                            i.style.opacity = "1"; // ✅ Apparition fluide
+                        }, 500); // ✅ Délai progressif pour éviter l'effet brutal
+                    });
+            
+                    // ✅ Mettre à jour la liste des images actuellement affichées
+                    selectedItems = newItems;
+                }, 2000); // ✅ Attendre la fin du fade-out avant de changer
+            }, 10000); // ✅ Rotation toutes les 10s
         }
     
         if (window.innerWidth < 768) {

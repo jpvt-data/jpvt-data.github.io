@@ -277,7 +277,9 @@ nav ul li a {
 }
 
 .project-category h3 {
-    font-size: 1.6em;
+    font-size: 1.3em; /* ✅ Réduction de la taille du titre */
+    text-align: center; /* ✅ Centre le texte */
+    margin-bottom: 15px; /* ✅ Ajoute un petit espace sous le titre */
     color: #f5a623; /* ✅ Accentuer les titres en orange */
 }
 

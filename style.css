@@ -12,10 +12,10 @@ body {
     font-weight: bold;
 }
 
-/* ========== En-tÃªte ========== */
-header {
+/* ========== Ancien En-tÃªte ========== */
+/*header {
     background: #222;
-    height: 60px; /* Augmenter la hauteur pour inclure le hamburger */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@ header {
 }
 
 
-/* ========== Navigation ========== */
+/* ========== Navigation ========== 
 nav ul {
     list-style: none;
     padding: 0;
@@ -49,6 +49,71 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     color: white;
+}*/
+
+/* ========== HEADER NAVIGATION ========== */
+header {
+    background: #222;
+    height: 90px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ========== BANDEAU SOCIAL ========== */
+.social-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
 /* === Icône du menu hamburger === */
@@ -99,6 +164,15 @@ nav ul li a {
 /* === Mode Mobile : Affichage du menu hamburger et menu caché === */
 /* === Affichage du menu mobile === */
 @media (max-width: 768px) {
+    header {
+        height: 70px; /* ✅ Agrandit le bandeau noir */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+    
     .close-menu {
         display: block; /* ✅ Affiche la croix seulement en mobile */
         position: absolute;
@@ -110,9 +184,26 @@ nav ul li a {
     }
 
     .menu-toggle {
+        font-size: 35px;
         display: block; /* ✅ Affiche l'icône hamburger */
     }
 
+   .social-banner {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 25px; /* ✅ Icônes sociales légèrement plus petites */
+        height: auto;
+    }
+    
     nav {
         position: fixed;
         top: 0;
@@ -762,16 +853,16 @@ footer {
 /* === FIN PATCHWORK GALLERY === */
 
 /* === BANDEAU SOCIAL === */
-.social-banner {
-    background: black; /* ✅ Fond noir */
-    padding: 20px 0; /* ✅ Espacement vertical */
+/*.social-banner {
+    background: black;
+    padding: 20px 0;
     text-align: center;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center; /* ✅ Centre les icônes */
-    gap: 40px; /* ✅ Espacement entre les icônes */
+    justify-content: center;
+    gap: 40px;
 }
 
 .icon-link {
@@ -780,14 +871,14 @@ footer {
 }
 
 .icon-link img {
-    width: 40px; /* ✅ Taille des icônes */
+    width: 40px;
     height: auto;
-    transition: transform 0.3s ease-in-out; /* ✅ Animation douce */
+    transition: transform 0.3s ease-in-out;
 }
 
 .icon-link:hover img {
-    transform: scale(1.2); /* ✅ Zoom au survol */
-}
+    transform: scale(1.2);
+}*/
 
 /* === Texte au survol === */
 .icon-text {

@@ -326,26 +326,48 @@ nav ul li a {
     box-shadow: 0px 6px 12px rgba(255, 179, 71, 0.5);
 }
 
-
-/* ========== Pied de page ========== */
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-/* ========== Responsive : Affichage mobile ========== */
+/* ========== ADAPTATION PROJECTS VERSION MOBILE ========== */
 @media (max-width: 768px) {
     .project-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* ✅ 1 projet par ligne */
+        gap: 30px; /* ✅ Espace suffisant entre les blocs */
+        padding: 30px 8%; /* ✅ Resserre les marges */
     }
+
     .project-category {
-        width: 90%;
-        margin-bottom: 20px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1); /* ✅ Ombrage plus doux */
+    }
+
+    /* ✅ Images plus petites mais toujours visibles */
+    .project-category img {
+        height: 180px; /* ✅ Moins imposant */
+        width: 180px;
+        border-radius: 10px;
+    }
+
+    /* ✅ Titre plus compact */
+    .project-category h3 {
+        font-size: 1.2em; /* ✅ Réduit mais toujours visible */
+        margin-bottom: 8px;
+    }
+
+    /* ✅ Texte bien lisible mais pas envahissant */
+    .project-category p {
+        font-size: 0.9em; /* ✅ Réduit mais confortable */
+        line-height: 1.5;
+        padding: 0 8px;
+    }
+
+    /* ✅ Bouton plus discret et bien intégré */
+    .project-category .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+        border-radius: 25px; /* ✅ Arrondi doux */
     }
 }
+
 
 /* ANIMATION INTRO */
 .intro {
@@ -632,4 +654,13 @@ footer {
 
 
 /* === FIN PATCHWORK GALLERY === */
+
+/* ========== Pied de page ========== */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
 

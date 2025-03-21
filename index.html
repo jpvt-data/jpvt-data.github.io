@@ -94,20 +94,27 @@
     const textContainer = document.getElementById("text-slide");
     
     function changeText() {
-        textContainer.style.opacity = 0; // ✅ Début du fade-out
+        // 1️⃣ Début du fade-out
+        textContainer.style.transition = "opacity 0.8s ease-out"; 
+        textContainer.style.opacity = 0; 
     
         setTimeout(() => {
-            index = (index + 1) % texts.length; // ✅ Change le texte après un délai
+            // 2️⃣ Change le texte une fois totalement invisible
+            index = (index + 1) % texts.length; 
             textContainer.innerText = texts[index];
     
-            setTimeout(() => {
-                textContainer.style.opacity = 1; // ✅ Applique le fade-in progressif
-            }, 300); // ✅ Délai entre le changement de texte et l'apparition
-        }, 500); // ✅ Laisse le texte "disparaître" avant de changer
+            // 3️⃣ Applique immédiatement un fade-in progressif
+            textContainer.style.transition = "opacity 1.2s ease-in"; // ✅ Plus long pour éviter l'effet brutal
+            textContainer.style.opacity = 1;
+        }, 800); // ✅ Attendre la fin du fade-out avant de changer le texte
     }
     
-    // Changer toutes les 3 secondes (temps de lecture)
-    setInterval(changeText, 4000);
+    // ✅ Vérifier si l'élément existe avant de lancer l'animation
+    if (textContainer) {
+        setInterval(changeText, 4000); // ✅ 4 secondes pour lisibilité
+    } else {
+        console.error("L'élément #text-slide n'existe pas.");
+    }
     </script>
 
     <!-- FIN Intro déroulante -->

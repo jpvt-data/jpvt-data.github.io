@@ -234,7 +234,8 @@ nav ul li a {
     }
 }
 
-/* ========== Section Projets ========== */
+/* ========== SECTION PROJETS DATA ========== */
+
 #projets-data-titre {
     margin-bottom: 20px; /* ✅ Ajoute un espace sous le titre */
 }
@@ -251,70 +252,78 @@ nav ul li a {
 }
 
 .project-container {
-    display: flex;
-    justify-content: space-between; /* ✅ Ajuste l'espacement pour éviter les gros écarts */
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 par ligne */
+    gap: 40px; /* ✅ Espace plus grand entre chaque bloc */
+    padding: 50px 5%; /* ✅ Resserre la section et aère */
+    justify-content: center;
 }
 
+/* ✅ Chaque projet = écrin précieux */
 .project-category {
-    width: 30%;
-    padding: 25px;
-    background: #222; /* ✅ Gris anthracite */
-    color: white; /* ✅ Texte en blanc */
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-.project-category img {
-    display: block; /* ✅ Évite les marges indésirables */
-    margin: 0 auto; /* ✅ Centre l'image horizontalement */
-    height: 250px; /* ✅ Réduction de la hauteur */
-    width: 250px; /* ✅ Réduction de la largeur */
-    object-fit: contain; /* ✅ Garde l'image entière sans la couper */
-    border-radius: 8px;
-}
-
-.project-category h3 {
-    font-size: 1.3em; /* ✅ Réduction de la taille du titre */
-    text-align: center; /* ✅ Centre le texte */
-    margin-bottom: 15px; /* ✅ Ajoute un petit espace sous le titre */
-    color: #f5a623; /* ✅ Accentuer les titres en orange */
-}
-
-.project-category p {
-    font-size: 0.9em;
-    text-align: justify;
-    color: #ddd; /* ✅ Texte légèrement plus doux que blanc pur */
+    background: #1c1c1c; /* ✅ Gris anthracite chic */
+    padding: 30px;
+    border-radius: 15px; /* ✅ Arrondi subtil */
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* ✅ Effet 3D léger */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-category:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px); /* ✅ Effet de lévitation subtile */
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.2); /* ✅ Effet plus premium */
+}
+
+/* ✅ Images plus petites et aérées */
+.project-category img {
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.2); /* ✅ Léger effet cadre */
     transition: transform 0.3s ease-in-out;
 }
 
+.project-category:hover img {
+    transform: scale(1.05); /* ✅ Effet subtil au survol */
+}
+
+/* ✅ Titre du projet raffiné */
+.project-category h3 {
+    font-size: 1.4em;
+    color: #fff; /* ✅ Texte blanc sobre */
+    margin-bottom: 10px;
+    font-weight: normal; /* ✅ Pas trop bold, plus léger */
+}
+
+/* ✅ Texte descriptif plus fin */
+.project-category p {
+    font-size: 1em;
+    color: #bbb; /* ✅ Gris clair pour un rendu élégant */
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* ✅ BOUTON plus subtil et raffiné */
 .project-category .btn {
-    display: block; /* ✅ Pour centrer le bouton */
-    width: fit-content; /* ✅ Ajuste la largeur au texte */
-    margin: 15px auto 0; /* ✅ Centre verticalement et horizontalement */
-    background: linear-gradient(135deg, #f5a623, #ff7b00); /* ✅ Dégradé doré/orangé */
-    color: white; /* ✅ Texte en blanc pour un bon contraste */
-    font-weight: bold; /* ✅ Texte plus visible */
-    text-transform: uppercase; /* ✅ Style premium */
-    padding: 12px 24px; /* ✅ Augmente l'espace pour un rendu plus aéré */
-    border-radius: 50px; /* ✅ Effet de bouton moderne et arrondi */
-    font-size: 1.1em; /* ✅ Taille agréable */
-    letter-spacing: 1px; /* ✅ Espacement pour un effet plus raffiné */
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* ✅ Ombre douce pour un effet 3D */
-    transition: all 0.3s ease-in-out; /* ✅ Animation fluide */
-    text-decoration: none; /* ✅ Supprime le soulignement */
+    display: inline-block;
+    padding: 10px 20px;
+    background: none;
+    color: #ffb347; /* ✅ Orange raffiné, pas criard */
+    border: 2px solid #ffb347;
+    border-radius: 30px; /* ✅ Bouton doux et arrondi */
+    font-weight: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .project-category .btn:hover {
-    background: linear-gradient(135deg, #ff7b00, #d88b1f); /* ✅ Accentue le dégradé au survol */
-    box-shadow: 0px 6px 12px rgba(255, 123, 0, 0.5); /* ✅ Renforce l'effet 3D */
-    transform: translateY(-3px); /* ✅ Légère élévation pour un effet de clic */
+    background: #ffb347; /* ✅ Passe en plein doré au survol */
+    color: #1c1c1c;
+    box-shadow: 0px 6px 12px rgba(255, 179, 71, 0.5);
 }
 
 

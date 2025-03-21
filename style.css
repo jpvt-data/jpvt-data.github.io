@@ -152,7 +152,7 @@ nav ul li a {
 /* === Affichage du menu mobile === */
 @media (max-width: 768px) {
     header {
-        height: 70px; /* ✅ Ajuste la hauteur du header */
+        height: 80px; /* ✅ Ajuste la hauteur du header */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -183,7 +183,7 @@ nav ul li a {
     .social-icons {
         position: absolute;
         top: 50%;
-        right: 30px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
+        right: 40px; /* ✅ Ajuste l'alignement pour ne pas sortir de l'écran */
         transform: translateY(-50%);
         display: flex;
         gap: 10px; /* ✅ Réduit l’espace pour que tout rentre */

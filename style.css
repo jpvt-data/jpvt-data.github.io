@@ -737,24 +737,29 @@ footer {
     .dataviz-gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* ✅ 2 images par ligne */
-        gap: 10px; /* ✅ Réduit l'espacement */
-        padding: 10px; /* ✅ Réduction des marges */
-        overflow: hidden; /* ✅ Empêche le scroll infini */
-        max-height: 600px; /* ✅ Limite la hauteur totale */
-        position: relative;
+        gap: 10px; /* ✅ Réduit l'espace entre les images */
+        padding: 10px;
+        overflow: hidden; /* ✅ Évite le défilement infini */
     }
 
     .dataviz-item {
-        height: 150px; /* ✅ Ajuste la hauteur pour optimiser */
+        width: 100%;
+        height: 150px; /* ✅ Hauteur ajustée pour un ratio 3:2 */
         padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        transition: opacity 1.5s ease-in-out; /* ✅ Transition fluide */
     }
 
     .dataviz-item img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* ✅ Ajuste l'image sans déformation */
+        object-fit: contain; /* ✅ Ajuste sans recadrer */
     }
 }
+
 
 /* === FIN PATCHWORK GALLERY === */
 

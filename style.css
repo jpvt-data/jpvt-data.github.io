@@ -32,7 +32,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Espace entre le menu et les icônes */
+    margin-top: 20px;
 }
 
 nav ul {
@@ -71,7 +71,7 @@ nav ul li a {
 }
 
 .social-icons img {
-    width: 30px;
+    width: 40px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }

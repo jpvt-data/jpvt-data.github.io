@@ -267,6 +267,11 @@ nav ul li a {
     box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* ✅ Effet 3D léger */
     text-align: center;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ✅ Assure que tous les blocs sont bien équilibrés */
+    align-items: center;
+    height: 100%; /* ✅ Tous les blocs auront la même hauteur */
 }
 
 .project-category:hover {
@@ -276,12 +281,12 @@ nav ul li a {
 
 /* ✅ Images plus petites et aérées */
 .project-category img {
-    height: 220px;
-    width: 220px;
     object-fit: cover;
     border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.2); /* ✅ Léger effet cadre */
     transition: transform 0.3s ease-in-out;
+    max-width: 250px; /* ✅ Taille un peu plus petite pour ne pas écraser le texte */
+    height: auto; /* ✅ Garde le ratio */
 }
 
 .project-category:hover img {
@@ -302,6 +307,10 @@ nav ul li a {
     color: #bbb; /* ✅ Gris clair pour un rendu élégant */
     line-height: 1.6;
     padding: 0 10px;
+    min-height: 120px; /* ✅ Ajuste en fonction de la longueur moyenne du texte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ✅ BOUTON plus subtil et raffiné */
@@ -318,6 +327,8 @@ nav ul li a {
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
+    align-self: center;
+    margin-top: auto; /* ✅ Place le bouton en bas */
 }
 
 .project-category .btn:hover {

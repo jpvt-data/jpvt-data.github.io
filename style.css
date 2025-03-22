@@ -589,14 +589,14 @@ nav ul li a {
 /* ✅ Responsive mobile : 4 par ligne */
 @media (max-width: 768px) {
     .stack-gallery {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px;
         padding: 30px 5%;
     }
 
     .stack-item img {
-        max-width: 80px;
-        max-height: 80px;
+        max-width: 100px;
+        max-height: 100px;
     }
 }
 

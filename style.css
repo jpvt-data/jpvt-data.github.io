@@ -241,6 +241,19 @@ nav ul li a {
     text-align: center;
 }
 
+/* Style des descriptions sous les titres */
+.section-description {
+    background: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 20px 5%;
+    max-width: 900px;
+    margin: 0 auto 40px auto; /* ✅ Centre le texte avec un bon espacement */
+    line-height: 1.6;
+}
+
 /* ✅ Structure principale */
 .project-container {
     display: grid;

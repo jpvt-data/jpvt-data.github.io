@@ -565,17 +565,17 @@ nav ul li a {
 /* ========== STACK GALLERY ========== */
 .stack-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 30px;
-    padding: 40px 8%;
+    grid-template-columns: repeat(6, 1fr); /* ✅ 6 par ligne */
+    gap: 40px;
+    padding: 40px 6%;
     background-color: #ffffff;
     justify-items: center;
     align-items: center;
 }
 
 .stack-item img {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 90px;     /* ✅ Plus gros */
+    max-height: 90px;
     object-fit: contain;
     transition: transform 0.3s ease-in-out;
     filter: grayscale(0%);
@@ -585,6 +585,21 @@ nav ul li a {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
+
+/* ✅ Responsive mobile : 4 par ligne */
+@media (max-width: 768px) {
+    .stack-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        padding: 30px 5%;
+    }
+
+    .stack-item img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
+
 
 
 /* === PATCHWORK GALLERY === */

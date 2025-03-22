@@ -17,7 +17,7 @@ body {
 /* ========== HEADER NAVIGATION ========== */
 header {
     background: #222;
-    height: 80px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
+    height: 90px; /* ✅ Augmente la hauteur pour inclure le bandeau social */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 nav ul {
@@ -64,7 +64,7 @@ nav ul li a {
     justify-content: center;
     align-items: center; /* ✅ Centre verticalement les icônes */
     padding: 5px 0;
-    margin-top: 10px; /* ✅ Ajoute un peu d'espace sous le menu */
+    margin-top: 5px; /* ✅ Ajoute un peu d'espace sous le menu */
 }
 
 .social-icons {
@@ -234,87 +234,144 @@ nav ul li a {
     }
 }
 
-/* ========== Section Projets ========== */
-.projects {
-    padding: 50px 20px;
-    background: #fff;
-}
+/* ========== SECTION PROJETS DATA ========== */
 
-.projects h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.project-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.project-category {
-    width: 30%;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+#projets-data-titre {
+    margin-bottom: 40px; /* ✅ Ajoute un espace suffisant sous le titre */
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.project-category img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.project-category h3 {
-    font-size: 1.6em;
-    color: #222;
-}
-
-.project-category p {
+/* Style des descriptions sous les titres */
+.section-description {
+    background: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
-    color: #555;
+    text-align: center;
+    padding: 20px 5%;
+    max-width: 900px;
+    margin: 0 auto 40px auto; /* ✅ Centre le texte avec un bon espacement */
+    line-height: 1.6;
 }
 
+/* ✅ Structure principale */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ FORCÉ à 3 colonnes */
+    gap: 30px; /* ✅ Espacement entre les blocs */
+    padding: 0 2%; /* ✅ Ajuste l’espace latéral */
+}
+
+/* ✅ Chaque projet est un écrin précieux */
+.project-category {
+    background: #1c1c1c; /* ✅ Fond sombre premium */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px; /* ✅ Fixe une hauteur cohérente */
+}
+
+/* ✅ Effet de survol subtil */
+.project-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.15);
+}
+
+/* ✅ Images élégantes et centrées */
+.project-category img {
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    max-width: 220px; /* ✅ Ajuste la taille des images */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ✅ Effet zoom léger sur image au survol */
+.project-category:hover img {
+    transform: scale(1.05);
+}
+
+/* ✅ Titre raffiné et bien positionné */
+.project-category h3 {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* ✅ Texte descriptif équilibré */
+.project-category p {
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.6;
+    min-height: 100px; /* ✅ Évite les écarts de hauteur */
+    text-align: justify;
+}
+
+/* ✅ Bouton raffiné */
 .project-category .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 16px;
-    background: #007BFF;
-    color: white;
+    margin-top: auto; /* ✅ Fixe le bouton en bas */
+    padding: 10px 22px;
+    background: none;
+    color: #ffb347;
+    border: 2px solid #ffb347;
+    border-radius: 30px;
+    font-weight: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
+/* ✅ Effet interactif du bouton */
 .project-category .btn:hover {
-    background: #0056b3;
+    background: #ffb347;
+    color: #1c1c1c;
+    box-shadow: 0px 6px 12px rgba(255, 179, 71, 0.5);
 }
 
-/* ========== Pied de page ========== */
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-}
+/* ========== ADAPTATION MOBILE ========== */
 
-/* ========== Responsive : Affichage mobile ========== */
 @media (max-width: 768px) {
     .project-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* ✅ 1 seul bloc par ligne */
+        gap: 20px;
     }
+
     .project-category {
-        width: 90%;
-        margin-bottom: 20px;
+        height: auto; /* ✅ Adaptatif */
+        padding: 20px;
+    }
+
+    .project-category img {
+        max-width: 180px;
+    }
+
+    .project-category h3 {
+        font-size: 1.2em;
+    }
+
+    .project-category p {
+        font-size: 0.95em;
+        padding: 0 5px;
+    }
+
+    .project-category .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+        border-radius: 25px;
     }
 }
+
 
 /* ANIMATION INTRO */
 .intro {
@@ -365,7 +422,7 @@ footer {
 .skills-section {
     background-color: black;
     color: white;
-    padding: 40px 0;
+    padding: 40px;
     display: flex;
     justify-content: center;
 }
@@ -466,28 +523,84 @@ footer {
     }
 }
 
-
-
-/* === PATCHWORK GALLERY === */
-/* === Bandeau de la galerie Dataviz === */
-.dataviz-header {
+/* === TITRE DES SECTIONS === */
+.section-titre {
     background: black;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-.dataviz-header h2 {
+.section-titre h2 {
     font-size: 28px;
     font-weight: normal;
     margin: 0;
 }
 
-.dataviz-header p {
-    font-size: 16px;
-    margin: 5px 0 0;
+/* ✅ Harmonisation du titre "Exercices Techniques" avec "Projets Data" */
+#exercices-techniques-titre {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
+
+/* === FIN TITRE DES SECTIONS === */
+
+/* === SECTION STACK === */
+
+/* ✅ Titre harmonisé "Ma Stack" */
+#ma-stack-titre {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ✅ Galerie des logos outils */
+.stack-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 10%;
+    background: #fff;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.stack-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.stack-item span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95em;
+    color: #1c1c1c;
+    text-align: center;
+}
+
+.stack-item:hover {
+    transform: scale(1.1);
+}
+
+
+/* === PATCHWORK GALLERY === */
+/* === Bandeau de la galerie Dataviz === */
 
 .dataviz-gallery {
     display: grid;
@@ -606,12 +719,39 @@ footer {
 
 /* === FIN PATCHWORK GALLERY === */
 
-/* === ESPACE ENTRE LES SECTIONS === */
-.intro {
-    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous l'intro */
+
+/* === SECTION STORY === */
+
+/* ✅ Harmonisation du titre "Ma Story" avec les autres sections */
+#ma-story-titre {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.social-banner {
-    margin-bottom: 20px; /* ✅ Ajoute un espace blanc sous le bandeau social */
+/* ✅ Introduction sous "Ma Story" */
+.story-content {
+    background: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    text-align: justify;
+    padding: 30px 8%;
+    max-width: 900px;
+    margin: 0 auto 50px auto; /* ✅ Bien espacé et centré */
+    line-height: 1.8;
 }
+
+
+/* ========== Pied de page ========== */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
 

@@ -562,40 +562,28 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* ✅ Galerie des logos outils */
+/* ========== STACK GALLERY ========== */
 .stack-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 30px;
-    padding: 40px 10%;
-    background: #fff;
-}
-
-.stack-item {
-    display: flex;
-    flex-direction: column;
+    padding: 40px 8%;
+    background-color: #ffffff;
+    justify-items: center;
     align-items: center;
-    width: 100px;
-    transition: transform 0.3s ease;
 }
 
 .stack-item img {
-    width: 80px;
-    height: 80px;
+    max-width: 70px;
+    max-height: 70px;
     object-fit: contain;
-    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(0%);
 }
 
-.stack-item span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95em;
-    color: #1c1c1c;
-    text-align: center;
-}
-
-.stack-item:hover {
+.stack-item img:hover {
     transform: scale(1.1);
+    filter: grayscale(0%);
 }
 
 

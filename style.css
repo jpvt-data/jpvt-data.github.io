@@ -723,116 +723,134 @@ nav ul li a {
 
 /* === FIN PATCHWORK GALLERY === */
 
-/* ========== SECTION EXERCICES TECHNIQUES ========== */
+/* ========== SECTION EXERCICES TECHNIQUES HARMONISÉE ========== */
 
 .tech-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ✅ 3 blocs par ligne */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 2%;
 }
 
-/* ✅ Bloc style horizontal compact */
 .tech-category {
-    display: flex;
     background: #1c1c1c;
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
     padding: 20px;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 20px;
-    height: 220px; /* ✅ Hauteur réduite */
+    height: 220px; /* ✅ Hauteur fixe harmonisée */
+    transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Image à gauche */
-.tech-category img {
-    max-width: 100px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    object-fit: contain;
-}
-
-/* ✅ Zone texte à droite */
-.tech-category h3 {
-    color: #fff;
-    font-size: 1.1em;
-    margin: 0 0 8px 0;
-    font-weight: normal;
-}
-
-.tech-category p {
-    color: #ccc;
-    font-size: 0.95em;
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
-/* ✅ Container à droite : h3 + p + bouton */
-.tech-text {
+/* ✅ Bloc gauche (image + bouton) */
+.tech-category > div:first-child {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    align-items: center;
+    gap: 10px; /* ✅ Espacement entre image et bouton */
+    flex-shrink: 0;
 }
 
-/* ✅ Bouton compact sous l'image */
+/* ✅ Image */
+.tech-category img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-category img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Bouton */
 .tech-category .btn {
     padding: 6px 12px;
     font-size: 0.85em;
-    color: #ffb347;
+    border-radius: 20px;
     border: 2px solid #ffb347;
     background: none;
-    border-radius: 25px;
+    color: #ffb347;
     text-decoration: none;
-    text-align: center;
     transition: all 0.3s ease-in-out;
-    display: inline-block;
-    width: 100px;
+    width: 100%; /* ✅ même largeur que l'image */
+    text-align: center;
 }
 
 .tech-category .btn:hover {
     background: #ffb347;
     color: #1c1c1c;
-    box-shadow: 0px 4px 8px rgba(255, 179, 71, 0.5);
+    box-shadow: 0px 4px 8px rgba(255, 179, 71, 0.4);
 }
 
+/* ✅ Bloc texte */
+.tech-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    padding-top: 2px; /* ✅ Réduit l’espace avec le haut */
+}
+
+/* ✅ Titre */
+.tech-text h3 {
+    font-size: 1.1em;
+    margin-bottom: 8px; /* ✅ Moins d’espace sous le titre */
+    color: #fff;
+    text-align: left;
+    line-height: 1.3;
+}
+
+/* ✅ Paragraphe */
+.tech-text p {
+    font-size: 0.95em;
+    color: #ccc;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ========== ADAPTATION MOBILE ========== */
 @media (max-width: 768px) {
     .tech-container {
-        grid-template-columns: 1fr; /* ✅ 1 par ligne */
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
 
     .tech-category {
         flex-direction: column;
         height: auto;
-        text-align: center;
+    }
+
+    .tech-category > div:first-child {
+        flex-direction: column;
+        align-items: center;
     }
 
     .tech-category img {
-        max-width: 80px;
-        margin-bottom: 10px;
-    }
-
-    .tech-text {
-        width: 100%;
-        text-align: center;
-    }
-
-    .tech-category h3 {
-        font-size: 1em;
-    }
-
-    .tech-category p {
-        font-size: 0.9em;
-        padding: 0 10px;
+        width: 100px;
+        height: 100px;
     }
 
     .tech-category .btn {
-        margin: 0 auto;
+        width: auto;
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .tech-text {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .tech-text h3 {
+        text-align: center;
     }
 }
+
 
 
 /* === SECTION STORY === */

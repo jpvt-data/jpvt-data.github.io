@@ -738,75 +738,74 @@ nav ul li a {
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
     padding: 20px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    align-items: center; /* ✅ Centre verticalement l’ensemble */
     gap: 20px;
-    height: 220px; /* ✅ Hauteur fixe harmonisée */
+    height: 200px; /* ✅ Hauteur fixe harmonisée */
     transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Bloc gauche (image + bouton) */
-.tech-category > div:first-child {
+/* ✅ Colonne gauche : image + bouton */
+.tech-category .tech-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* ✅ Espacement entre image et bouton */
+    gap: 12px;
     flex-shrink: 0;
 }
 
 /* ✅ Image */
-.tech-category img {
-    width: 80px;
-    height: 80px;
+.tech-left img {
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
-.tech-category img:hover {
+.tech-left img:hover {
     transform: scale(1.05);
 }
 
-/* ✅ Bouton */
-.tech-category .btn {
-    padding: 6px 12px;
-    font-size: 0.85em;
+/* ✅ Bouton plus étroit */
+.tech-left .btn {
+    padding: 6px 14px;
+    font-size: 0.8em;
     border-radius: 20px;
     border: 2px solid #ffb347;
     background: none;
     color: #ffb347;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    width: 100%; /* ✅ même largeur que l'image */
     text-align: center;
+    width: auto;
 }
 
-.tech-category .btn:hover {
+.tech-left .btn:hover {
     background: #ffb347;
     color: #1c1c1c;
     box-shadow: 0px 4px 8px rgba(255, 179, 71, 0.4);
 }
 
-/* ✅ Bloc texte */
+/* ✅ Bloc texte centré verticalement */
 .tech-text {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* ✅ Centre verticalement */
     text-align: justify;
-    padding-top: 2px; /* ✅ Réduit l’espace avec le haut */
 }
 
-/* ✅ Titre */
+/* ✅ Titre aligné */
 .tech-text h3 {
     font-size: 1.1em;
-    margin-bottom: 8px; /* ✅ Moins d’espace sous le titre */
+    margin-bottom: 6px;
     color: #fff;
     text-align: left;
     line-height: 1.3;
 }
 
-/* ✅ Paragraphe */
+/* ✅ Texte descriptif */
 .tech-text p {
     font-size: 0.95em;
     color: #ccc;
@@ -814,7 +813,7 @@ nav ul li a {
     margin: 0;
 }
 
-/* ========== ADAPTATION MOBILE ========== */
+/* ========== MOBILE ========== */
 @media (max-width: 768px) {
     .tech-container {
         grid-template-columns: 1fr;
@@ -823,33 +822,28 @@ nav ul li a {
     .tech-category {
         flex-direction: column;
         height: auto;
-    }
-
-    .tech-category > div:first-child {
-        flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
-    .tech-category img {
-        width: 100px;
-        height: 100px;
+    .tech-left {
+        margin-bottom: 12px;
     }
 
-    .tech-category .btn {
-        width: auto;
-        font-size: 0.9em;
-        padding: 8px 16px;
+    .tech-left img {
+        width: 90px;
+        height: 90px;
     }
 
     .tech-text {
         text-align: center;
-        margin-top: 15px;
     }
 
     .tech-text h3 {
         text-align: center;
     }
 }
+
 
 
 

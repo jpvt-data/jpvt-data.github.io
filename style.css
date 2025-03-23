@@ -723,6 +723,117 @@ nav ul li a {
 
 /* === FIN PATCHWORK GALLERY === */
 
+/* ========== SECTION EXERCICES TECHNIQUES ========== */
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 blocs par ligne */
+    gap: 30px;
+    padding: 0 2%;
+}
+
+/* ✅ Bloc style horizontal compact */
+.tech-category {
+    display: flex;
+    background: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    height: 220px; /* ✅ Hauteur réduite */
+}
+
+/* ✅ Image à gauche */
+.tech-category img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    object-fit: contain;
+}
+
+/* ✅ Zone texte à droite */
+.tech-category h3 {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 0 0 8px 0;
+    font-weight: normal;
+}
+
+.tech-category p {
+    color: #ccc;
+    font-size: 0.95em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* ✅ Container à droite : h3 + p + bouton */
+.tech-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ✅ Bouton compact sous l'image */
+.tech-category .btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    color: #ffb347;
+    border: 2px solid #ffb347;
+    background: none;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    width: 100px;
+}
+
+.tech-category .btn:hover {
+    background: #ffb347;
+    color: #1c1c1c;
+    box-shadow: 0px 4px 8px rgba(255, 179, 71, 0.5);
+}
+
+@media (max-width: 768px) {
+    .tech-container {
+        grid-template-columns: 1fr; /* ✅ 1 par ligne */
+        gap: 20px;
+    }
+
+    .tech-category {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .tech-category img {
+        max-width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .tech-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tech-category h3 {
+        font-size: 1em;
+    }
+
+    .tech-category p {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    .tech-category .btn {
+        margin: 0 auto;
+    }
+}
+
 
 /* === SECTION STORY === */
 

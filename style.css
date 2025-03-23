@@ -828,6 +828,7 @@ nav ul li a {
     .tech-left img {
         width: 90px;
         height: 90px;
+        margin-bottom: 12px;
     }
 
     .tech-text {

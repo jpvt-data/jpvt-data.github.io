@@ -234,25 +234,37 @@ nav ul li a {
     }
 }
 
-/* ========== SECTION PROJETS DATA ========== */
-
-#projets-data-titre {
-    margin-bottom: 40px; /* ✅ Ajoute un espace suffisant sous le titre */
-    text-align: center;
+/* === TITRE DES SECTIONS === */
+.section-titre {
+    background: #000;               /* Fond noir élégant */
+    color: #fff;                    /* Texte blanc lisible */
+    text-align: center;             /* Centrage horizontal du texte */
+    padding: 20px 0;                /* Espacement vertical haut/bas */
+    margin-top: 40px;               /* Marge avant le titre (séparation avec la section précédente) */
+    margin-bottom: 40px;
 }
 
-/* Style des descriptions sous les titres */
+.section-titre h2 {
+    font-size: 28px;                /* Taille du titre */
+    font-weight: normal;            /* Poids standard (pas trop gras) */
+    margin: 0;                      /* Supprime les marges par défaut autour du h2 */
+}
+
 .section-description {
-    background: #fff;
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
-    text-align: center;
-    padding: 20px 5%;
-    max-width: 900px;
-    margin: 0 auto 40px auto; /* ✅ Centre le texte avec un bon espacement */
-    line-height: 1.6;
+    background: #fff;               /* Fond blanc neutre */
+    color: #000;                    /* Texte noir classique */
+    font-family: 'Montserrat', sans-serif;  /* Police cohérente avec le reste du site */
+    font-size: 1.1em;               /* Taille de texte agréable à lire */
+    text-align: center;             /* Texte centré */
+    padding: 20px 5%;               /* Espacement intérieur (haut/bas + marges latérales) */
+    max-width: 900px;               /* Largeur maximale pour une bonne lisibilité */
+    margin: 0 auto 40px auto;       /* Centre horizontalement + marge bas entre description et contenu suivant */
+    line-height: 1.6;               /* Espacement entre les lignes pour une lecture fluide */
 }
+
+/* === FIN TITRE DES SECTIONS === */
+
+/* ========== SECTION PROJETS DATA ========== */
 
 .project-container {
     display: grid;
@@ -519,44 +531,7 @@ nav ul li a {
     }
 }
 
-/* === TITRE DES SECTIONS === */
-.section-titre {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.section-titre h2 {
-    font-size: 28px;
-    font-weight: normal;
-    margin: 0;
-}
-
-/* ✅ Harmonisation du titre "Exercices Techniques" avec "Projets Data" */
-#exercices-techniques-titre {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* === FIN TITRE DES SECTIONS === */
-
 /* === SECTION STACK === */
-
-/* ✅ Titre harmonisé "Ma Stack" */
-#ma-stack-titre {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 /* ========== STACK GALLERY ========== */
 .stack-gallery {
@@ -846,16 +821,6 @@ nav ul li a {
 
 
 /* === SECTION STORY === */
-
-/* ✅ Harmonisation du titre "Ma Story" avec les autres sections */
-#ma-story-titre {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 /* ✅ Introduction sous "Ma Story" */
 .story-content {

@@ -255,14 +255,12 @@ nav ul li a {
 }
 
 .project-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 2%;
 }
 
-/* ✅ Harmonisation des blocs projets */
 .project-category {
     background: #1c1c1c;
     padding: 25px 20px;
@@ -270,27 +268,26 @@ nav ul li a {
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
     transition: all 0.3s ease-in-out;
-    flex: 0 1 calc(33.33% - 30px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     height: 550px;
+    box-sizing: border-box;
 }
 
-/* ✅ Image centrée verticalement */
+/* ✅ Image parfaitement centrée */
 .project-category img {
     object-fit: cover;
     border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
     max-width: 220px;
-    height: auto;
-    margin-bottom: 15px;
-    align-self: center;
+    margin: 0 auto 20px auto;
+    display: block;
 }
 
-/* ✅ Titre positionné juste sous l’image */
+/* ✅ Titre bien positionné */
 .project-category h3 {
     font-size: 1.3em;
     color: #fff;
@@ -298,18 +295,19 @@ nav ul li a {
     font-weight: normal;
 }
 
-/* ✅ Texte calé haut, justification propre */
+/* ✅ Texte bien calé et hauteur flexible */
 .project-category p {
     font-size: 1em;
     color: #ccc;
     line-height: 1.6;
     text-align: justify;
-    margin-bottom: 25px; /* ✅ Réduction espace texte-bouton */
-    flex-grow: 1; /* ✅ Permet à tous les blocs d’avoir même hauteur */
+    flex-grow: 1;
+    margin-bottom: 10px; /* ✅ réduit pour coller au bouton */
 }
 
-/* ✅ Bouton aligné bas */
+/* ✅ Bouton bien calé bas du bloc */
 .project-category .btn {
+    align-self: center;
     padding: 10px 22px;
     background: none;
     color: #ffb347;
@@ -321,10 +319,10 @@ nav ul li a {
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    margin-top: auto; /* ✅ Fixe bouton bas du bloc */
+    margin-top: auto; /* ✅ force le bouton tout en bas */
 }
 
-/* ✅ Hover premium */
+/* ✅ Hover effet */
 .project-category:hover img {
     transform: scale(1.05);
 }

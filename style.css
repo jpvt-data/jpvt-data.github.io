@@ -828,10 +828,11 @@ nav ul li a {
     .tech-left img {
         width: 90px;
         height: 90px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .tech-text {
+        margin-top: 8px;
         text-align: center;
     }
 

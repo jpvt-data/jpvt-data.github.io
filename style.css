@@ -254,71 +254,62 @@ nav ul li a {
     line-height: 1.6;
 }
 
-/* ✅ Structure principale */
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ✅ FORCÉ à 3 colonnes */
-    gap: 30px; /* ✅ Espacement entre les blocs */
-    padding: 0 2%; /* ✅ Ajuste l’espace latéral */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 2%;
 }
 
-/* ✅ Chaque projet est un écrin précieux */
+/* ✅ Harmonisation des blocs projets */
 .project-category {
-    background: #1c1c1c; /* ✅ Fond sombre premium */
-    padding: 25px;
+    background: #1c1c1c;
+    padding: 25px 20px;
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
     transition: all 0.3s ease-in-out;
+    flex: 0 1 calc(33.33% - 30px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 550px; /* ✅ Fixe une hauteur cohérente */
+    height: 550px;
 }
 
-/* ✅ Effet de survol subtil */
-.project-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 12px 25px rgba(255, 255, 255, 0.15);
-}
-
-/* ✅ Images élégantes et centrées */
+/* ✅ Image centrée verticalement */
 .project-category img {
     object-fit: cover;
     border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
-    max-width: 220px; /* ✅ Ajuste la taille des images */
+    max-width: 220px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    align-self: center;
 }
 
-/* ✅ Effet zoom léger sur image au survol */
-.project-category:hover img {
-    transform: scale(1.05);
-}
-
-/* ✅ Titre raffiné et bien positionné */
+/* ✅ Titre positionné juste sous l’image */
 .project-category h3 {
     font-size: 1.3em;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: normal;
 }
 
-/* ✅ Texte descriptif équilibré */
+/* ✅ Texte calé haut, justification propre */
 .project-category p {
     font-size: 1em;
     color: #ccc;
     line-height: 1.6;
-    min-height: 100px; /* ✅ Évite les écarts de hauteur */
     text-align: justify;
+    margin-bottom: 25px; /* ✅ Réduction espace texte-bouton */
+    flex-grow: 1; /* ✅ Permet à tous les blocs d’avoir même hauteur */
 }
 
-/* ✅ Bouton raffiné */
+/* ✅ Bouton aligné bas */
 .project-category .btn {
-    margin-top: auto; /* ✅ Fixe le bouton en bas */
     padding: 10px 22px;
     background: none;
     color: #ffb347;
@@ -330,14 +321,20 @@ nav ul li a {
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
+    margin-top: auto; /* ✅ Fixe bouton bas du bloc */
 }
 
-/* ✅ Effet interactif du bouton */
+/* ✅ Hover premium */
+.project-category:hover img {
+    transform: scale(1.05);
+}
+
 .project-category .btn:hover {
     background: #ffb347;
     color: #1c1c1c;
     box-shadow: 0px 6px 12px rgba(255, 179, 71, 0.5);
 }
+
 
 /* ========== ADAPTATION MOBILE ========== */
 

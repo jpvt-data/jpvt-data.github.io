@@ -836,13 +836,14 @@ nav ul li a {
     display: flex;
     gap: 20px;
     animation: scroll-gallery 60s linear infinite;
-    width: fit-content;
+    width: max-content; /* ✅ permet le scroll fluide */
 }
 
 .story-gallery img {
     height: 200px;
     border-radius: 8px;
     opacity: 0.9;
+    flex-shrink: 0; /* ✅ empêche la réduction d’image */
     transition: transform 0.3s ease;
 }
 
@@ -850,22 +851,16 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Animation défilement horizontal */
+/* ✅ Animation horizontale continue */
 @keyframes scroll-gallery {
     0% {
-        transform: translateX(0%);
+        transform: translateX(-50%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(0%);
     }
 }
 
-/* Dupliquer la galerie pour un scroll sans fin */
-.story-gallery::after {
-    content: "";
-    display: flex;
-    gap: 20px;
-}
 
 
 /* ✅ Introduction sous "Ma Story" */

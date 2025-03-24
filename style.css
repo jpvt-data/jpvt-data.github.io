@@ -822,6 +822,52 @@ nav ul li a {
 
 /* === SECTION STORY === */
 
+/* === GALERIE ANIMÉE MA STORY === */
+.story-gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+    background: #111; /* fond sombre */
+    padding: 10px 0;
+    margin-bottom: 40px;
+    filter: sepia(0.6) contrast(1.1); /* effet oldschool */
+}
+
+.story-gallery {
+    display: flex;
+    gap: 20px;
+    animation: scroll-gallery 60s linear infinite;
+    width: fit-content;
+}
+
+.story-gallery img {
+    height: 80px;
+    border-radius: 8px;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.story-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation défilement horizontal */
+@keyframes scroll-gallery {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Dupliquer la galerie pour un scroll sans fin */
+.story-gallery::after {
+    content: "";
+    display: flex;
+    gap: 20px;
+}
+
+
 /* ✅ Introduction sous "Ma Story" */
 .story-content {
     background: #fff;

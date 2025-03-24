@@ -394,6 +394,14 @@ nav ul li a {
     height: auto; /* ✅ Assure que la hauteur s'ajuste dynamiquement */
 }
 
+@media (max-width: 768px) {
+    .intro {
+        padding: 60px 0; /* ✅ Réduit le padding pour absorber les variations */
+        min-height: 250px; /* ✅ Hauteur minimum pour éviter les sauts visuels */
+    }
+}
+
+
 /* Titre fixe */
 .title {
     font-size: 28px;

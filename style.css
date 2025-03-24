@@ -851,17 +851,21 @@ nav ul li a {
 /* ✅ Défilement fluide gauche vers droite */
 @keyframes scroll-gallery {
     0% {
-        transform: translateX(0%);
+        transform: translateX(-50%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(0%);
     }
 }
 
 /* ✅ Mode mobile — images plus petites */
 @media (max-width: 768px) {
     .story-gallery img {
-        height: 80px;
+        height: 100px;
+    }
+
+    .story-gallery {
+    animation: scroll-gallery 30s linear infinite;
     }
 }
 

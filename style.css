@@ -817,32 +817,30 @@ nav ul li a {
     }
 }
 
-
-
-
 /* === SECTION STORY === */
 
 /* === GALERIE ANIMÉE MA STORY === */
 .story-gallery-wrapper {
     overflow: hidden;
     width: 100%;
-    background: #111; /* fond sombre */
+    background: #111;
     padding: 10px 0;
     margin-bottom: 40px;
-    filter: sepia(0.6) contrast(1.1); /* effet oldschool */
+    filter: sepia(0.6) contrast(1.1);
 }
 
 .story-gallery {
     display: flex;
     gap: 20px;
     animation: scroll-gallery 60s linear infinite;
-    width: fit-content;
+    width: max-content;
 }
 
 .story-gallery img {
-    height: 80px;
+    height: 200px;
     border-radius: 8px;
     opacity: 0.9;
+    flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
@@ -850,7 +848,7 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Animation défilement horizontal */
+/* ✅ Défilement fluide gauche vers droite */
 @keyframes scroll-gallery {
     0% {
         transform: translateX(0%);
@@ -860,12 +858,14 @@ nav ul li a {
     }
 }
 
-/* Dupliquer la galerie pour un scroll sans fin */
-.story-gallery::after {
-    content: "";
-    display: flex;
-    gap: 20px;
+/* ✅ Mode mobile — images plus petites */
+@media (max-width: 768px) {
+    .story-gallery img {
+        height: 80px;
+    }
 }
+
+
 
 
 /* ✅ Introduction sous "Ma Story" */
@@ -880,6 +880,14 @@ nav ul li a {
     margin: 0 auto 50px auto; /* ✅ Bien espacé et centré */
     line-height: 1.8;
 }
+
+.story-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
 
 
 /* ========== Pied de page ========== */

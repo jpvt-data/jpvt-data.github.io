@@ -861,7 +861,7 @@ nav ul li a {
 /* ✅ Mode mobile — images plus petites */
 @media (max-width: 768px) {
     .story-gallery img {
-        height: 100px;
+        height: 120px;
     }
 
     .story-gallery {

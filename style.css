@@ -526,12 +526,11 @@ nav ul li a {
     }
 
     .skills-logos {
-        display: flex;
-        flex-direction: row; /* ✅ Logos en ligne */
-        justify-content: center; /* ✅ Centrage horizontal */
-        flex-wrap: wrap; /* ✅ Permet le retour à la ligne si besoin */
-        gap: 10px;
-    }
+            display: flex;
+            flex-direction: column; /* ✅ Affiche les logos en colonne */
+            align-items: center; /* ✅ Centre les logos */
+            gap: 20px; /* ✅ Espacement plus large entre chaque logo */
+        }
 
     .skills-logos img {
         height: auto; /* ✅ Réduit légèrement la taille des logos pour s'adapter */

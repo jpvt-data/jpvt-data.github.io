@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jpvt-data.github.io/sitemap.xml

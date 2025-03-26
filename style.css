@@ -706,14 +706,15 @@ nav ul li a {
 /* === TITRE DE CATÉGORIE EXERCICES TECHNIQUES === */
 /* Titre de catégorie */
 .category-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000;
-    margin: 30px auto 20px auto;
-    max-width: 1200px;
-    padding: 0 5%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    color: #1c1c1c;
+    margin: 40px 0 20px 0;
+    gap: 20px;
 }
 
 .category-title::before,

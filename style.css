@@ -816,6 +816,35 @@ nav ul li a {
     margin: 0;
 }
 
+/* ✅ Tags techniques */
+.tech-tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-start; /* ✅ Aligne les tags à gauche */
+    align-items: flex-start;     /* ✅ Évite l'effet centrage vertical */
+}
+
+.tech-tags .tag {
+    background-color: #e0e0e0;
+    color: #1c1c1c;
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ✅ Regroupe image + texte horizontalement */
+.tech-top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
 /* ========== MOBILE ========== */
 @media (max-width: 768px) {
     .tech-container {
@@ -850,26 +879,6 @@ nav ul li a {
     }
 }
 
-/* ✅ Tags techniques */
-.tech-tags {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-    justify-content: flex-start; /* ✅ Aligne les tags à gauche */
-    align-items: flex-start;     /* ✅ Évite l'effet centrage vertical */
-}
-
-.tech-tags .tag {
-    background-color: #e0e0e0;
-    color: #1c1c1c;
-    font-size: 0.75em;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-}
 
 
 /* === SECTION STORY === */

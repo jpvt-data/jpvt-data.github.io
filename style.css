@@ -850,6 +850,26 @@ nav ul li a {
     }
 }
 
+/* ✅ Tags techniques */
+.tech-tags {
+    margin-top: auto; /* ✅ Les pousse en bas du bloc */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tech-tags .tag {
+    background-color: #e0e0e0;
+    color: #1c1c1c;
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 /* === SECTION STORY === */
 
 /* === GALERIE ANIMÉE MA STORY === */

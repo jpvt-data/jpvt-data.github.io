@@ -703,6 +703,27 @@ nav ul li a {
 
 /* ========== SECTION EXERCICES TECHNIQUES HARMONISÉE ========== */
 
+/* === TITRE DE CATÉGORIE EXERCICES TECHNIQUES === */
+.category-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    margin: 30px auto 20px auto;
+    max-width: 1200px;
+    padding: 0 5%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ✅ Adaptation mobile : centré */
+@media (max-width: 768px) {
+    .category-title {
+        text-align: center;
+    }
+}
+
+/* === FIN TITRE DE CATÉGORIE EXERCICES TECHNIQUES === */
+
 .tech-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

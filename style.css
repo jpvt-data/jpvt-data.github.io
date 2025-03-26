@@ -707,14 +707,14 @@ nav ul li a {
 /* Titre de catégorie */
 .category-title {
     text-align: center;
-    font-size: 1.7em;
-    font-weight: 600;
+    font-size: 1.6em;
+    font-weight: 500;
     font-family: 'Montserrat', sans-serif;
     color: #1c1c1c;
-    margin: 40px 0 20px 0;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    margin: 35px 0 15px 0;
+    letter-spacing: 0.3px;
 }
+
 
 
 /* === FIN TITRE DE CATÉGORIE EXERCICES TECHNIQUES === */

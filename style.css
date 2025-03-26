@@ -714,20 +714,24 @@ nav ul li a {
 
 /* Ligne noire sous le titre */
 .category-underline {
-    height: 2px;
+    height: 1px;
     background-color: #000;
     width: 100%;
+    max-width: 1200px;
+    padding: 0 2%; /* ✅ Aligne au même padding que les blocs */
+    margin: 0 auto 30px auto;
 }
+
 
 .category-title {
     font-size: 1.5em;
     font-weight: bold;
     color: #000;
-    margin: 30px auto 20px auto;
-    max-width: 1200px;
-    padding: 0 5%;
+    margin: 30px auto 5px auto;
+    padding: 0 2%; /* ✅ Aligne au contenu comme .tech-container */
     text-align: left;
     font-family: 'Montserrat', sans-serif;
+    max-width: 1200px;
 }
 
 /* ✅ Adaptation mobile : centré */

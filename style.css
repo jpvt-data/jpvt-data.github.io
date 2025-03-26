@@ -485,6 +485,12 @@ nav ul li a {
     line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+    .skills-text {
+        max-width: 90%; /* ✅ Plus large que les 600px du mode desktop */
+    }
+}
+
 /* === Correction du texte déroulant en mode mobile === */
 @media (max-width: 768px) {
     #text-container {

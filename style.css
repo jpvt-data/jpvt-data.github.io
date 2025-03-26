@@ -837,13 +837,6 @@ nav ul li a {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ✅ Regroupe image + texte horizontalement */
-.tech-top {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
 
 /* ========== MOBILE ========== */
 @media (max-width: 768px) {

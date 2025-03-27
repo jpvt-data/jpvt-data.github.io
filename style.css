@@ -733,6 +733,8 @@ nav ul li a {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 2%;
+    justify-items: center;
+    align-items: center;
 }
 
 .tech-category {

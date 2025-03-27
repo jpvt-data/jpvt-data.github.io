@@ -746,7 +746,7 @@ nav ul li a {
     display: flex;
     align-items: center; /* ✅ Centre verticalement l’ensemble */
     gap: 20px;
-    height: 100%; /* ✅ Hauteur fixe harmonisée */
+    height: auto; /* ✅ Hauteur fixe harmonisée */
     min-height: 280px;
     transition: all 0.3s ease-in-out;
 }

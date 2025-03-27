@@ -829,7 +829,6 @@ nav ul li a {
 
 /* ✅ Tags techniques */
 .tech-tags {
-    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

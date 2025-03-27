@@ -735,6 +735,7 @@ nav ul li a {
     padding: 0 2%;
     justify-items: center;
     align-items: center;
+    align-content: start;
 }
 
 .tech-category {
@@ -746,7 +747,8 @@ nav ul li a {
     display: flex;
     align-items: center; /* ✅ Centre verticalement l’ensemble */
     gap: 20px;
-    height: auto; /* ✅ Hauteur fixe harmonisée */
+    height: 100%; /* ✅ Hauteur fixe harmonisée */
+    min-height: 280px;
     transition: all 0.3s ease-in-out;
 }
 

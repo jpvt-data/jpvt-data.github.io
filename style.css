@@ -728,24 +728,14 @@ nav ul li a {
 
 /* === FIN TITRE DE CATÉGORIE EXERCICES TECHNIQUES === */
 
-/*.tech-container {
+.tech-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 2%;
     justify-items: center;
     align-items: center;
-}*/
-
-.tech-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* ✅ centre les blocs horizontalement */
-    align-items: stretch;    /* ✅ égalise les hauteurs */
-    gap: 30px;
-    padding: 0 2%;
 }
-
 
 .tech-category {
     flex-direction: column;

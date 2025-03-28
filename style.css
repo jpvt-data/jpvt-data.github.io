@@ -751,6 +751,16 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
 }
 
+.tech-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 15px;
+}
+
+
 /* ✅ Colonne gauche : image + bouton */
 .tech-category .tech-left {
     display: flex;
@@ -796,7 +806,7 @@ nav ul li a {
 
 /* ✅ Bloc texte centré verticalement */
 .tech-text {
-    flex: 1;
+    /*flex: 1;*/
     display: flex;
     flex-direction: column;
     justify-content: center; /* ✅ Centre verticalement */

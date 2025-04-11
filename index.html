@@ -128,6 +128,14 @@
 
     <!-- FIN Intro déroulante -->
 
+    <!-- COMPTEUR ET LIKE -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div id="visite-counter">👁️ Visites : <span id="visites">...</span></div>
+        <button id="like-button">❤️ J'aime <span id="like-count">0</span></button>
+      </div>
+    </section>
+    <!-- FIN COMPTEUR ET LIKE -->
     
     <!-- SECTION SKILLS -->
     <section class="skills-section">
@@ -759,6 +767,25 @@
         menu.classList.toggle("active"); // ✅ Ajoute/enlève la classe "active"
     }
     </script>
+
+    <script>
+    // Simule un compteur (exemple local - pas permanent)
+    let visites = localStorage.getItem("visites") || 0;
+    visites++;
+    localStorage.setItem("visites", visites);
+    document.getElementById("visites").innerText = visites;
+    
+    // Gestion du bouton "Like"
+    let likes = localStorage.getItem("likes") || 0;
+    document.getElementById("like-count").innerText = likes;
+    
+    document.getElementById("like-button").addEventListener("click", function () {
+      likes++;
+      localStorage.setItem("likes", likes);
+      document.getElementById("like-count").innerText = likes;
+    });
+    </script>
+
 
 </body>
 </html>

@@ -267,7 +267,7 @@ nav ul li a {
 /* === SECTION COMPTEUR DE VISITES ET LIKE === */
 .engagement-section {
     background-color: white;
-    padding: 25px 0;
+    padding: 20px 0;
     border-top: 1px solid #ddd;
 }
 
@@ -275,10 +275,10 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .engagement-item {
@@ -287,6 +287,11 @@ nav ul li a {
     gap: 8px;
     color: #333;
     font-weight: 600;
+}
+
+.engagement-separator {
+    font-size: 1.5em;
+    color: #999;
 }
 
 .like-btn {
@@ -298,6 +303,9 @@ nav ul li a {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .like-btn:hover {
@@ -315,7 +323,12 @@ nav ul li a {
         flex-direction: column;
         gap: 15px;
     }
+
+    .engagement-separator {
+        display: none;
+    }
 }
+
 
 /* === FIN SECTION COMPTEUR ET LIKE === */
 

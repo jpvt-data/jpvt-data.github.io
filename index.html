@@ -778,23 +778,22 @@
     </script>
 
     <script>
-    // Simule un compteur (exemple local - pas permanent)
+    // Compteur visites (stocké localement)
     let visites = localStorage.getItem("visites") || 0;
     visites++;
     localStorage.setItem("visites", visites);
     document.getElementById("visites").innerText = visites;
     
-    // Gestion du bouton "Like"
+    // Compteur de likes (stocké localement)
     let likes = localStorage.getItem("likes") || 0;
     document.getElementById("like-count").innerText = likes;
     
-    document.getElementById("like-button").addEventListener("click", function () {
-      likes++;
-      localStorage.setItem("likes", likes);
-      document.getElementById("like-count").innerText = likes;
+    document.getElementById("like-button").addEventListener("click", () => {
+        likes++;
+        localStorage.setItem("likes", likes);
+        document.getElementById("like-count").innerText = likes;
     });
     </script>
-
 
 </body>
 </html>

@@ -264,31 +264,35 @@ nav ul li a {
 
 /* === FIN TITRE DES SECTIONS === */
 
-/* === SECTION COMPTEUR ET LIKE === */
-.stats-section {
-    background: #eaf4f9;
-    padding: 30px 0;
+/* === SECTION COMPTEUR DE VISITES ET LIKE === */
+.engagement-section {
+    background-color: white;
+    padding: 25px 0;
+    border-top: 1px solid #ddd;
 }
 
-.stats-container {
+.engagement-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     flex-wrap: wrap;
 }
 
-#visite-counter {
+.engagement-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #333;
     font-weight: 600;
 }
 
-#like-button {
-    background: #fff;
-    color: #d14b4b;
+.like-btn {
+    background-color: #fff;
     border: 2px solid #d14b4b;
+    color: #d14b4b;
     padding: 10px 18px;
     border-radius: 30px;
     cursor: pointer;
@@ -296,11 +300,23 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
 }
 
-#like-button:hover {
+.like-btn:hover {
     background: #d14b4b;
     color: #fff;
     box-shadow: 0 4px 10px rgba(209, 75, 75, 0.3);
 }
+
+.engagement-item .emoji {
+    font-size: 1.3em;
+}
+
+@media (max-width: 600px) {
+    .engagement-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* === FIN SECTION COMPTEUR ET LIKE === */
 
 /* ========== SECTION PROJETS DATA ========== */
